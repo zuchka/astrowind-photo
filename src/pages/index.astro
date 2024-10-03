@@ -10,58 +10,62 @@ export const MAIN_CATEGORY_CLASS =
 ---
 
 <Layout metadata={metadata}>
-  <section class="container mx-auto my-8">
-      <p class="italic text-white/75 ml-4 mb-4">from the mountains to the sea...</p>
-      <CldImage
-        src="foo/erugjwlm051zt3fhwwr3.jpg"
-        alt="The Mountains"
-        width={1000}
-        height={1000}
-        overlays={[
-          {
-            text: {
-              color: 'white',
-              fontFamily: 'Arial',
-              fontSize: 50,
-              fontWeight: 'bold',
-              text: 'THE MOUNTAINS',
+  <section class="container mx-auto">
+    <p class="italic ml-4 mb-4">from the mountains to the sea...</p>
+    <div class="max-w-4xl mx-auto px-4">
+      <a href="/mountains/landing">
+        <CldImage
+          class="rounded-lg"
+          src="foo/erugjwlm051zt3fhwwr3.jpg"
+          alt="The Mountains"
+          width={1000}
+          height={650}
+          sizes="(max-width: 768px) 100vw, 1000px"
+          overlays={[
+            {
+              text: {
+                color: 'white',
+                fontFamily: 'Arial',
+                fontSize: 70,
+                fontWeight: 'bold',
+                text: 'THE MOUNTAINS',
+              },
+              position: {
+                gravity: 'center',
+                y: 500,
+              },
             },
-            position: {
-              gravity: 'center',
-              y: 500,
-            },
-          },
-        ]}
-      />
-
-      <CldImage
-        src="16_cc-resize_iuomdy"
-        alt="The Sea"
-        width={1000}
-        height={1000}
-        overlays={[
-          {
-            text: {
-              color: 'white',
-              fontFamily: 'Arial',
-              fontSize: 50,
-              fontWeight: 'bold',
-              text: 'THE SEA',
-            },
-            position: {
-              gravity: 'center',
-              y: -500,
-            },
-          },
-      ]}
-    />
-    <a href="/mountains/landing">
-      <CldImage src="foo/erugjwlm051zt3fhwwr3" width={800} height={400} alt="A sample image" sizes="100vw" />
-    </a>
+          ]}
+        />
+      </a>
+    </div>
   </section>
   <section class="container mx-auto my-8">
-    <a href="/sea/landing">
-      <CldImage src="20230321_194630769_iOS_1_fuktzs" width={800} height={400} alt="A sample image" sizes="100vw" />
-    </a>
+    <div class="max-w-4xl mx-auto px-4">
+      <a href="/sea/landing">
+        <CldImage
+          class="rounded-lg"
+          src="lanai/sea/vkbcrq9etcaagrglzn5q"
+          alt="The Sea"
+          width={1000}
+          height={1000}
+          overlays={[
+            {
+              text: {
+                color: 'white',
+                fontFamily: 'Arial',
+                fontSize: 50,
+                fontWeight: 'bold',
+                text: 'THE SEA',
+              },
+              position: {
+                gravity: 'center',
+                y: -450,
+              },
+            },
+          ]}
+        />
+      </a>
+    </div>
   </section>
 </Layout>
