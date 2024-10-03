@@ -1,0 +1,53 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Cloudinary } from 'astro-cloudinary-image'
+import Pricing from '~/components/widgets/Pricing.astro';
+
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="container mx-auto my-8">
+    <Cloudinary 
+      width="800"
+      height="400"
+      resize="fill"
+      gravity="face"
+      cornerRadius={5}
+      alt="A sample image"
+      src="adam-eve-main" 
+      errorImage="NotFound.svg"
+    />
+  </section>
+  <Pricing
+    title=""
+    prices={[
+      {
+        title: 'Adam & Eve',
+        subtitle: 'Fernando Botero',
+        price: '0',
+        period: 'Sint magna exercitation ea. Elit et anim exercitation aute quis ad do excepteur adipisicing qui consequat elit qui voluptate. Elit magna ea laboris quis pariatur eu laboris velit ipsum laboris proident occaecat ut. Dolore aute sunt ipsum ipsum amet eiusmod tempor irure dolor et dolor esse Lorem non ullamco.',
+        callToAction: {
+          target: '_blank',
+          text: 'Learn More',
+          href: '#',
+        },
+      },
+    ]}
+  />
+  <section class="container mx-auto my-8">
+    <Cloudinary 
+      width="800"
+      height="400"
+      resize="fill"
+      gravity="face"
+      cornerRadius={5}
+      alt="A sample image"
+      src="adam-eve-detail-1" 
+      errorImage="NotFound.svg"
+    />
+  </section>
+</Layout>

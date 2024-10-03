@@ -1,0 +1,35 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Cloudinary } from 'astro-cloudinary-image'
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="container mx-auto my-8">
+    <Cloudinary 
+      width="800"
+      height="400"
+      resize="fill"
+      gravity="face"
+      cornerRadius={5}
+      alt="A sample image"
+      src="adam-eve-main" 
+      errorImage="NotFound.svg"
+    />
+  </section>
+  <section class="container mx-auto my-8">
+    <Cloudinary 
+      width="800"
+      height="400"
+      resize="fill"
+      gravity="face"
+      cornerRadius={5}
+      alt="A sample image"
+      src="adam-eve-detail-1" 
+      errorImage="NotFound.svg"
+    />
+  </section>
+</Layout>

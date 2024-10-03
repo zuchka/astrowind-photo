@@ -4,111 +4,87 @@ export const headerData = {
   links: [
     {
       text: ' The Mountains',
+      href: getPermalink('/mountains/landing'),
       links: [
         {
           text: 'Map',
-          href: getPermalink('/mountains/saas'),
+          href: getPermalink('/mountains/map'),
         },
         {
           text: 'Artworks',
-          href: getPermalink('/mountains/startup'),
+          href: getPermalink('/mountains/landing'),
         },
-        // {
-        //   text: 'Mobile app',
-        //   href: getPermalink('/homes/mobile-app'),
-        // },
-        // {
-        //   text: 'Personal',
-        //   href: getPermalink('/homes/personal'),
-        // },
       ],
     },
     {
       text: 'The Sea',
+      href: getPermalink('/sea/landing'),
       links: [
-        // {
-        //   text: 'Features (Anchor Link)',
-        //   href: getPermalink('/#features'),
-        // },
         {
           text: 'Map',
-          href: getPermalink('/services'),
+          href: getPermalink('/sea/map'),
         },
         {
           text: 'Artworks',
-          href: getPermalink('/pricing'),
+          href: getPermalink('/sea/landing'),
         },
-        // {
-        //   text: 'About us',
-        //   href: getPermalink('/about'),
-        // },
-        // {
-        //   text: 'Contact',
-        //   href: getPermalink('/contact'),
-        // },
-        // {
-        //   text: 'Terms',
-        //   href: getPermalink('/terms'),
-        // },
-        // {
-        //   text: 'Privacy policy',
-        //   href: getPermalink('/privacy'),
-        // },
       ],
     },
     {
       text: 'Artist Bios',
-      links: [
-        {
-          text: 'Fernando Botero',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Robert Indiana',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Ju Ming',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Emily Young',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Jaume Plensa',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        // {
-        //   text: 'Subscription',
-        //   href: getPermalink('/landing/subscription'),
-        // },
-      ],
+      href: getPermalink('/landing/lead-generation'),
+      // links: [
+      //   {
+      //     text: 'Fernando Botero',
+      //     href: getPermalink('/landing/lead-generation'),
+      //   },
+      //   {
+      //     text: 'Robert Indiana',
+      //     href: getPermalink('/landing/sales'),
+      //   },
+      //   {
+      //     text: 'Ju Ming',
+      //     href: getPermalink('/landing/click-through'),
+      //   },
+      //   {
+      //     text: 'Emily Young',
+      //     href: getPermalink('/landing/product'),
+      //   },
+      //   {
+      //     text: 'Jaume Plensa',
+      //     href: getPermalink('/landing/pre-launch'),
+      //   },
+      //   // {
+      //   //   text: 'Subscription',
+      //   //   href: getPermalink('/landing/subscription'),
+      //   // },
+      // ],
     },
     {
       text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
-      ],
+      href: getPermalink('/landing/lead-generation'),
+      // links: [
+      //   {
+      //     text: 'Blog List',
+      //     href: getBlogPermalink(),
+      //   },
+      //   {
+      //     text: 'Article',
+      //     href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+      //   },
+      //   {
+      //     text: 'Article (with MDX)',
+      //     href: getPermalink('markdown-elements-demo-post', 'post'),
+      //   },
+      //   {
+      //     text: 'Category Page',
+      //     href: getPermalink('tutorials', 'category'),
+      //   },
+      //   {
+      //     text: 'Tag Page',
+      //     href: getPermalink('astro', 'tag'),
+      //   },
+      // ],
     },
     // {
     //   text: 'Widgets',
