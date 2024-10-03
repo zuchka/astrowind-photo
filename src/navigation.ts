@@ -3,86 +3,86 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: ' The Mountains',
       links: [
         {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
+          text: 'Map',
+          href: getPermalink('/mountains/saas'),
         },
         {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
+          text: 'Artworks',
+          href: getPermalink('/mountains/startup'),
         },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
+        // {
+        //   text: 'Mobile app',
+        //   href: getPermalink('/homes/mobile-app'),
+        // },
+        // {
+        //   text: 'Personal',
+        //   href: getPermalink('/homes/personal'),
+        // },
       ],
     },
     {
-      text: 'Pages',
+      text: 'The Sea',
       links: [
+        // {
+        //   text: 'Features (Anchor Link)',
+        //   href: getPermalink('/#features'),
+        // },
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Services',
+          text: 'Map',
           href: getPermalink('/services'),
         },
         {
-          text: 'Pricing',
+          text: 'Artworks',
           href: getPermalink('/pricing'),
         },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
+        // {
+        //   text: 'About us',
+        //   href: getPermalink('/about'),
+        // },
+        // {
+        //   text: 'Contact',
+        //   href: getPermalink('/contact'),
+        // },
+        // {
+        //   text: 'Terms',
+        //   href: getPermalink('/terms'),
+        // },
+        // {
+        //   text: 'Privacy policy',
+        //   href: getPermalink('/privacy'),
+        // },
       ],
     },
     {
-      text: 'Landing',
+      text: 'Artist Bios',
       links: [
         {
-          text: 'Lead Generation',
+          text: 'Fernando Botero',
           href: getPermalink('/landing/lead-generation'),
         },
         {
-          text: 'Long-form Sales',
+          text: 'Robert Indiana',
           href: getPermalink('/landing/sales'),
         },
         {
-          text: 'Click-Through',
+          text: 'Ju Ming',
           href: getPermalink('/landing/click-through'),
         },
         {
-          text: 'Product Details (or Services)',
+          text: 'Emily Young',
           href: getPermalink('/landing/product'),
         },
         {
-          text: 'Coming Soon or Pre-Launch',
+          text: 'Jaume Plensa',
           href: getPermalink('/landing/pre-launch'),
         },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
+        // {
+        //   text: 'Subscription',
+        //   href: getPermalink('/landing/subscription'),
+        // },
       ],
     },
     {
@@ -110,12 +110,12 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
+    // {
+    //   text: 'Widgets',
+    //   href: '#',
+    // },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {
