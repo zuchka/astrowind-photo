@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { Cloudinary } from 'astro-cloudinary-image'
+import { CldImage } from 'astro-cloudinary';
 
 const metadata = {
   title: 'Startup Landing Page',
@@ -8,28 +8,36 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="container mx-auto my-8">
-    <Cloudinary 
-      width="800"
-      height="400"
-      resize="fill"
-      gravity="face"
-      cornerRadius={5}
-      alt="A sample image"
-      src="adam-eve-main" 
-      errorImage="NotFound.svg"
-    />
-  </section>
-  <section class="container mx-auto my-8">
-    <Cloudinary 
-      width="800"
-      height="400"
-      resize="fill"
-      gravity="face"
-      cornerRadius={5}
-      alt="A sample image"
-      src="adam-eve-detail-1" 
-      errorImage="NotFound.svg"
-    />
-  </section>
+  <div class="max-w-4xl mx-auto px-4">
+    <a href="/mountains/botero-adam-eve">
+      <CldImage
+        class="rounded-lg"
+        src="adam-eve-main"
+        alt="Botero Adam & Eve"
+        width={1000}
+        height={1000}
+        sizes="(max-width: 768px) 100vw, 1000px"
+      />
+    </a>
+    <a href="/mountains/landing" class="block pt-4">
+      <CldImage
+        class="rounded-lg"
+        src="aphrodite-detail-1"
+        alt="Koons Aphrodite"
+        width={1000}
+        height={1000}
+        sizes="(max-width: 768px) 100vw, 1000px"
+      />
+    </a>
+    <a href="/mountains/landing" class="block pt-4">
+      <CldImage
+        class="rounded-lg"
+        src="burning-desire-main"
+        alt="Burning Desire"
+        width={1000}
+        height={1000}
+        sizes="(max-width: 768px) 100vw, 1000px"
+      />
+    </a>
+  </div>
 </Layout>
