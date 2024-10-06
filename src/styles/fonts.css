@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'avenir-heavy';
+    src: url('/public/fonts/AvenirLTProHeavy.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'avenir-medium';
+    src: url('/fonts/AvenirLTProMediumOblique.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'avenir-medium';
+    src: url('/fonts/AvenirLTProMedium.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'avenir-book';
+    src: url('/fonts/AvenirLTProBookOblique.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'avenir-book';
+    src: url('/fonts/AvenirLTProBook.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'avenir-light';
+    src: url('/fonts/AvenirLTProLightOblique.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'avenir-light';
+    src: url('/fonts/AvenirLTProLight.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .avenir-medium {
+    font-family: 'avenir-medium', sans-serif;
+  }
+  .avenir-book {
+    font-family: 'avenir-book', sans-serif;
+  }
+  .avenir-heavy {
+    font-family: 'avenir-heavy', sans-serif;
+  }
+
+  
