@@ -153,6 +153,17 @@ export interface Price {
   ribbonTitle?: string;
 }
 
+export interface ArtworkDetail {
+  title?: string;
+  artist?: string;
+  date?: string;
+  description?: string;
+  callToAction?: CallToAction;
+  material?: string;
+  copyright?: string;
+  photoCredit?: string;
+}
+
 export interface Testimonial {
   title?: string;
   testimonial?: string;
@@ -229,6 +240,14 @@ export interface Stats extends Omit<Headline, 'classes'>, Widget {
 
 export interface Pricing extends Omit<Headline, 'classes'>, Widget {
   prices?: Array<Price>;
+}
+
+export interface ArtworkDetails extends Omit<Headline, 'classes'>, Widget {
+  artworkDetails?: Array<ArtworkDetail>;
+}
+
+export interface ArtworkDetailsSingle extends Omit<Headline, 'classes'>, Widget {
+  artworkDetails?: ArtworkDetail;
 }
 
 export interface Testimonials extends Omit<Headline, 'classes'>, Widget {

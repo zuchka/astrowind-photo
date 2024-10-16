@@ -1,53 +1,43 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { Cloudinary } from 'astro-cloudinary-image'
-import Pricing from '~/components/widgets/Pricing.astro';
-
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'Adam & Eve',
 };
 ---
 
 <Layout metadata={metadata}>
-  <section class="container mx-auto my-8">
-    <Cloudinary 
-      width="800"
-      height="400"
-      resize="fill"
-      gravity="face"
-      cornerRadius={5}
-      alt="A sample image"
-      src="adam-eve-main" 
-      errorImage="NotFound.svg"
-    />
-  </section>
-  <Pricing
-    title=""
-    prices={[
-      {
-        title: 'Adam & Eve',
-        subtitle: 'Fernando Botero',
-        price: '0',
-        period: 'Sint magna exercitation ea. Elit et anim exercitation aute quis ad do excepteur adipisicing qui consequat elit qui voluptate. Elit magna ea laboris quis pariatur eu laboris velit ipsum laboris proident occaecat ut. Dolore aute sunt ipsum ipsum amet eiusmod tempor irure dolor et dolor esse Lorem non ullamco.',
-        callToAction: {
-          target: '_blank',
-          text: 'Learn More',
-          href: '#',
-        },
-      },
-    ]}
+  <ArtworkImage
+    width="800"
+    height="800"
+    src="lanai/mountains/adam-eve/knivdx7jkwirdhndidvs"
+    alt="Adam & Eve sculpture by Fernando Botero"
+    caption="Image: © Phillip Sowers"
   />
-  <section class="container mx-auto my-8">
-    <Cloudinary 
-      width="800"
-      height="400"
-      resize="fill"
-      gravity="face"
-      cornerRadius={5}
-      alt="A sample image"
-      src="adam-eve-detail-1" 
-      errorImage="NotFound.svg"
-    />
-  </section>
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'Adam & Eve',
+      artist: 'FERNANDO BOTERO',
+      date: '2003',
+      description: `From the lobby of Sensei Lāna'i we see Fernando Botero's Adam and Eve. Framed by the slender Cook Pines that give way to the resort, each figure grasps an apple in one bulbous hand. Together, they welcome guests to this special place: Kō'ele, a royal land perched in clouds.<br><br>Typical of Fernando Botero's work, Adam and Eve are robust and solid, but in a witty, zestful sort of way. With soft, archaic smiles and contented postures, they remind us that Kō'ele, like paradise, is a place overflowing with life.`,
+      material: 'bronze',
+      copyright: '© Fernando Botero',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_blank',
+        text: 'Learn More',
+        href: '#',
+      },
+    }}
+  />
+  <ArtworkImage
+    width="800"
+    height="400"
+    src="adam-eve-detail-1"
+    alt="Detail of Adam & Eve sculpture"
+    gravity="face"
+    caption="Image: © Phillip Sowers"
+  />
 </Layout>

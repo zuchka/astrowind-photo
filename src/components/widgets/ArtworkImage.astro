@@ -1,0 +1,43 @@
+---
+import { Cloudinary } from 'astro-cloudinary-image';
+
+interface Props {
+  width: string;
+  height: string;
+  src: string;
+  alt: string;
+  resize?: string;
+  cornerRadius?: number;
+  gravity?: string;
+  errorImage?: string;
+  caption?: string;
+}
+
+const { 
+  width, 
+  height, 
+  src, 
+  alt, 
+  resize = "fill", 
+  cornerRadius = 5, 
+  gravity, 
+  errorImage = "NotFound.svg",
+  caption 
+} = Astro.props;
+---
+
+<div class="container mx-auto my-8">
+  <Cloudinary
+    width={width}
+    height={height}
+    resize={resize as "fill" | "crop" | "scale" | undefined}
+    cornerRadius={cornerRadius}
+    alt={alt}
+    src={src}
+    errorImage={errorImage}
+    gravity={gravity as "auto" | "face" | undefined}
+  />
+  {caption && 
+    <p class="avenir-italic text-sm text-gray-600 dark:text-slate-400 mt-2 text-right">{caption}</p>
+  }
+</div>

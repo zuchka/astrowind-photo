@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'avenir-heavy';
-    src: url('/public/fonts/AvenirLTProHeavy.otf') format('opentype');
+    src: url('/fonts/AvenirLTProHeavy.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
   }
