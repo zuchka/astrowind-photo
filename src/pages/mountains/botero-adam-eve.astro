@@ -4,15 +4,15 @@ import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 
 const metadata = {
-  title: 'Adam & Eve',
+  title: 'Botero Adam & Eve',
 };
 ---
 
 <Layout metadata={metadata}>
   <ArtworkImage
-    width="800"
-    height="800"
-    src="lanai/mountains/adam-eve/knivdx7jkwirdhndidvs"
+    width="1000"
+    height="1000"
+    src="lanai/mountains/adam-eve/main-1"
     alt="Adam & Eve sculpture by Fernando Botero"
     caption="Image: © Phillip Sowers"
   />
@@ -21,7 +21,19 @@ const metadata = {
       title: 'Adam & Eve',
       artist: 'FERNANDO BOTERO',
       date: '2003',
-      description: `From the lobby of Sensei Lāna'i we see Fernando Botero's Adam and Eve. Framed by the slender Cook Pines that give way to the resort, each figure grasps an apple in one bulbous hand. Together, they welcome guests to this special place: Kō'ele, a royal land perched in clouds.<br><br>Typical of Fernando Botero's work, Adam and Eve are robust and solid, but in a witty, zestful sort of way. With soft, archaic smiles and contented postures, they remind us that Kō'ele, like paradise, is a place overflowing with life.`,
+      description: `
+        From the lobby of Sensei Lāna'i we see Fernando Botero's Adam and Eve. 
+        Framed by the slender Cook Pines that give way to the resort, 
+        each figure grasps an apple in one bulbous hand. 
+        Together, they welcome guests to this special place: 
+        Kō'ele, a royal land perched in clouds.
+        <br><br>
+        Typical of Fernando Botero's work, Adam and Eve are robust and solid, 
+        but in a witty, zestful sort of way. 
+        With soft, archaic smiles and contented postures, 
+        they remind us that Kō'ele, like paradise, 
+        is a place overflowing with life.
+      `,
       material: 'bronze',
       copyright: '© Fernando Botero',
       photoCredit: 'Photo credit: © Phillip Sowers',
@@ -33,11 +45,10 @@ const metadata = {
     }}
   />
   <ArtworkImage
-    width="800"
-    height="400"
+    width="1000"
+    height="600"
     src="adam-eve-detail-1"
     alt="Detail of Adam & Eve sculpture"
-    gravity="face"
     caption="Image: © Phillip Sowers"
   />
 </Layout>

@@ -12,44 +12,45 @@ const {
 } = Astro.props;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <div class="flex items-stretch justify-center">
-    <div class="grid grid-cols-3 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
-      {
-        artworkDetails && (
-          <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
-            {artworkDetails.description && (
-              <div class="rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow px-6 py-8 flex w-full max-w-sm flex-col justify-between text-center">
-                <div class="px-2 py-0">
-                  {artworkDetails.title && (
-                    <h3 class="avenir-heavy text-xl font-semibold uppercase leading-6 tracking-wider mb-2">{artworkDetails.title}</h3>
-                  )}
-                  {artworkDetails.artist && <p class="avenir-medium sm:text-lg text-gray-600 dark:text-slate-400">{artworkDetails.artist}</p>}
-                  <div class="my-8 flex flex-col">
-                    {artworkDetails.date && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400 text-right">{artworkDetails.date}</p>}
-                    {artworkDetails.material && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400 text-right" set:html={artworkDetails.material}></p>}
-                    {artworkDetails.copyright && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400 text-right">{artworkDetails.copyright}</p>}
-                  </div>
-                  <div class="my-8">
-                    <p class="avenir-book text-base leading-6 text-gray-600 dark:text-slate-400 text-left" set:html={artworkDetails.description}></p>
-                  </div>
-                </div>
-                {artworkDetails.callToAction && (
-                  <div class={`flex justify-center space-x-4`}>
-                    <Button variant="secondary" text="Return to Gallery" href="/mountains/landing" />
-                    {typeof artworkDetails.callToAction === 'string' ? (
-                      <Fragment set:html={artworkDetails.callToAction} />
-                    ) : (
-                      artworkDetails.callToAction &&
-                      artworkDetails.callToAction.href && <Button {...artworkDetails.callToAction} />
-                    )}
-                  </div>
-                )}
-              </div>
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto pt-1 ${classes?.container ?? ''}`} bg={bg}>
+  <div class="flex items-center justify-center">
+    {
+      artworkDetails && artworkDetails.description && (
+        <div class="w-full max-w-4xl rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow">
+          <div class="text-left py-8 px-6">
+            {artworkDetails.title && (
+              <h3 class="avenir-heavy text-2xl font-semibold uppercase leading-6 tracking-wider mb-2">{artworkDetails.title}</h3>
             )}
+            {artworkDetails.artist && <p class="avenir-medium text-xl text-gray-600 dark:text-slate-400">{artworkDetails.artist}</p>}
           </div>
-        )
-      }
-    </div>
+          
+          <div class="px-6 pb-8 flex flex-col">
+            <div class="lg:flex lg:justify-between mb-8">
+              <div class="lg:w-1/4 lg:pr-4">
+                <div class="flex flex-col lg:text-left">
+                  {artworkDetails.date && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400">{artworkDetails.date}</p>}
+                  {artworkDetails.material && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400" set:html={artworkDetails.material}></p>}
+                  {artworkDetails.copyright && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400">{artworkDetails.copyright}</p>}
+                </div>
+              </div>
+              <div class="mt-8 lg:mt-0 lg:w-3/4 lg:pl-4">
+                <p class="avenir-book text-base leading-6 text-gray-600 dark:text-slate-400 text-left" set:html={artworkDetails.description}></p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center mt-auto">
+              <Button variant="secondary" text="Return to Gallery" href="/mountains/landing" />
+              {artworkDetails.callToAction && (
+                typeof artworkDetails.callToAction === 'string' ? (
+                  <div set:html={artworkDetails.callToAction} />
+                ) : (
+                  artworkDetails.callToAction &&
+                  artworkDetails.callToAction.href && <Button {...artworkDetails.callToAction} />
+                )
+              )}
+            </div>
+          </div>
+        </div>
+      )
+    }
   </div>
 </WidgetWrapper>

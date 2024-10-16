@@ -1,5 +1,5 @@
 ---
-import { Cloudinary } from 'astro-cloudinary-image';
+import { CldImage } from 'astro-cloudinary';
 
 interface Props {
   width: string;
@@ -11,6 +11,7 @@ interface Props {
   gravity?: string;
   errorImage?: string;
   caption?: string;
+  class?: string;
 }
 
 const { 
@@ -18,26 +19,29 @@ const {
   height, 
   src, 
   alt, 
-  resize = "fill", 
-  cornerRadius = 5, 
+  // resize = "fill", 
   gravity, 
-  errorImage = "NotFound.svg",
-  caption 
+  // errorImage = "NotFound.svg",
+  caption,
+  class: className = '',
 } = Astro.props;
+
+const containerClasses = `mx-auto my-8 max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`;
 ---
 
-<div class="container mx-auto my-8">
-  <Cloudinary
-    width={width}
-    height={height}
-    resize={resize as "fill" | "crop" | "scale" | undefined}
-    cornerRadius={cornerRadius}
-    alt={alt}
-    src={src}
-    errorImage={errorImage}
-    gravity={gravity as "auto" | "face" | undefined}
-  />
-  {caption && 
-    <p class="avenir-italic text-sm text-gray-600 dark:text-slate-400 mt-2 text-right">{caption}</p>
-  }
+<div class={containerClasses}>
+  <div class="max-w-4xl mx-auto">
+    <CldImage
+      class="rounded-lg w-full"
+      width={parseInt(width)}
+      height={parseInt(height)}
+      alt={alt}
+      src={src}
+      gravity={gravity as "auto" | "face" | undefined}
+      sizes="(max-width: 768px) 100vw, 1000px"
+    />
+    {caption && 
+      <p class="avenir-light italic text-[10px] text-gray-600 dark:text-slate-400 mt-2 text-right">{caption}</p>
+    }
+  </div>
 </div>
