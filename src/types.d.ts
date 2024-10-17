@@ -250,6 +250,14 @@ export interface ArtworkDetailsSingle extends Omit<Headline, 'classes'>, Widget 
   artworkDetails?: ArtworkDetail;
 }
 
+export interface ArtistBio extends Omit<Headline, 'classes'>, Widget {
+  artist?: string;
+  lifespan?: string;
+  nationality?: string;
+  description?: string;
+  callToAction?: CallToAction;
+}
+
 export interface Testimonials extends Omit<Headline, 'classes'>, Widget {
   testimonials?: Array<Testimonial>;
   callToAction?: CallToAction;

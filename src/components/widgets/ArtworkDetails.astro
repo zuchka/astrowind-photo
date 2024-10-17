@@ -28,13 +28,13 @@ const {
             <div class="lg:flex lg:justify-between mb-8">
               <div class="lg:w-1/4 lg:pr-4">
                 <div class="flex flex-col lg:text-left">
-                  {artworkDetails.date && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400">{artworkDetails.date}</p>}
-                  {artworkDetails.material && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400" set:html={artworkDetails.material}></p>}
-                  {artworkDetails.copyright && <p class="avenir-book text-sm text-gray-600 dark:text-slate-400">{artworkDetails.copyright}</p>}
+                  {artworkDetails.date && <p class="avenir-book text-base text-gray-600 dark:text-slate-400">{artworkDetails.date}</p>}
+                  {artworkDetails.material && <p class="avenir-book text-base text-gray-600 dark:text-slate-400" set:html={artworkDetails.material}></p>}
+                  {artworkDetails.copyright && <p class="avenir-book text-base text-gray-600 dark:text-slate-400">{artworkDetails.copyright}</p>}
                 </div>
               </div>
               <div class="mt-8 lg:mt-0 lg:w-3/4 lg:pl-4">
-                <p class="avenir-book text-base leading-6 text-gray-600 dark:text-slate-400 text-left" set:html={artworkDetails.description}></p>
+                <p class="avenir-book text-lg leading-7 text-gray-600 dark:text-slate-400 text-left" set:html={artworkDetails.description}></p>
               </div>
             </div>
             <div class="flex justify-between items-center mt-auto">

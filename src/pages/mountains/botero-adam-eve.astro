@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
-
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
 const metadata = {
   title: 'Botero Adam & Eve',
 };
@@ -51,12 +51,11 @@ const metadata = {
     alt="Detail of Adam & Eve sculpture"
     caption="Image: © Phillip Sowers"
   />
-  <ArtworkDetails
-    artworkDetails={{
-      title: 'Artist Bio',
-      artist: 'FERNANDO BOTERO',
-      date: '1932 - 2023',
-      description: `
+  <ArtistBio
+    artist="FERNANDO BOTERO"
+    lifespan="1932 - 2023"
+    nationality="Columbian"
+    description=`
         Fernando Botero’s signature style of creating sculptures
         with exaggerated and inflated features, suggesting
         political criticism and satire, coined a new term in the
@@ -68,16 +67,6 @@ const metadata = {
         experimenting with proportion and size with his
         paintings of round, corpulent humans, before switching
         to sculpture in the 1970s.
-      `,
-      material: 'Columbian',
-      copyright: '',
-      photoCredit: 'Photo credit: © Phillip Sowers',
-      // callToAction: {
-      //   target: '_blank',
-      //   text: 'Learn More',
-      //   href: '#',
-      // },
-    }}
-    id="artist-bio"
+      `
   />
 </Layout>
