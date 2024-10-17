@@ -38,9 +38,9 @@ const metadata = {
       copyright: '© Fernando Botero',
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
-        target: '_blank',
+        target: '_self',
         text: 'Learn More',
-        href: '#',
+        href: '#artist-bio',
       },
     }}
   />
@@ -50,5 +50,34 @@ const metadata = {
     src="adam-eve-detail-1"
     alt="Detail of Adam & Eve sculpture"
     caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'Artist Bio',
+      artist: 'FERNANDO BOTERO',
+      date: '1932 - 2023',
+      description: `
+        Fernando Botero’s signature style of creating sculptures
+        with exaggerated and inflated features, suggesting
+        political criticism and satire, coined a new term in the
+        art world: “Boterismo.”
+        <br><br>
+        The Columbian artist, well known
+        for representing women, men, daily life, and historical
+        events with wit and irony, began his career as a painter
+        experimenting with proportion and size with his
+        paintings of round, corpulent humans, before switching
+        to sculpture in the 1970s.
+      `,
+      material: 'Columbian',
+      copyright: '',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      // callToAction: {
+      //   target: '_blank',
+      //   text: 'Learn More',
+      //   href: '#',
+      // },
+    }}
+    id="artist-bio"
   />
 </Layout>
