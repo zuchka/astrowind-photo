@@ -1,0 +1,85 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Botero Woman on Horse',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="botero-woman-on-horse-main"
+    alt="Woman on Horse sculpture by Fernando Botero"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'WOMAN ON HORSE',
+      artist: 'FERNANDO BOTERO',
+      date: '2011',
+      description: `
+        We approach Woman on Horse from the animal’s
+        hind quarters, circling around its haunches until
+        the rider’s face appears. Her face is round and
+        smooth, whereas her steed’s is boxy and sharp.
+        <br><br>
+        There is a silliness and whimsy to this horse,
+        with its elephantine legs and compressed body.
+        It recalls the miniature ponies that graze the
+        pastures of Lāna'i Ranch—the very place where
+        this woman and her mount seem poised to ride.
+      `,
+      material: 'bronze',
+      copyright: '© Fernando Botero',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="FERNANDO BOTERO"
+    lifespan="1932 - 2023"
+    nationality="Columbian"
+    description=`
+      Fernando Botero’s signature style of creating sculptures
+      with exaggerated and inflated features, suggesting
+      political criticism and satire, coined a new term in the
+      art world: “Boterismo.”
+      <br><br>
+      The Columbian artist, well known
+      for representing women, men, daily life, and historical
+      events with wit and irony, began his career as a painter
+      experimenting with proportion and size with his
+      paintings of round, corpulent humans, before switching
+      to sculpture in the 1970s.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Front Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'08.5"N 156°55'03.5"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Woman on Horse is under the banyan tree in the front garden of Sensei Lāna'i.
+      Leave the lobby and look to your right.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/WrhAaxKwcGg7jiC4A',
+    }}
+  />
+</Layout>
