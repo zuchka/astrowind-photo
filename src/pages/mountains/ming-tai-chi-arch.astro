@@ -1,0 +1,84 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Ju Ming Tai Chi Arch',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="ju-ming-arch-main"
+    alt="Tai Chi Arch sculpture by Ju Ming"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'Tai Chi Arch',
+      artist: 'JU MING',
+      date: '2000',
+      description: `
+        Ju Ming’s Tai Chi Arch gives way to Sensei’s Onsen
+        Garden. From beneath the arch’s bronze span,
+        smell the piquant betel nuts from the nearby
+        grove of palms, and hear the water cascading
+        down from the nearby onsen soaking pools. 
+        <br><br>
+        Tai Chi Arch, much like Botero’s Dancer’s, recalls that
+        sense of being in one’s body—of being self-aware
+        as one moves with great precision.
+      `,
+      material: 'bronze',
+      copyright: '© Ju Ming',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="JU MING"
+    lifespan="1938 - "
+    nationality="Taiwanese"
+    description=`
+      At 15, Taiwanese artist Ju Ming trained as a woodcarver,
+      setting the foundation for his future career as a sculptor.
+      His work is characterized by large gestures, movement
+      and strength and combines traditional and modern
+      sculpture techniques. 
+      <br><br>
+      In his 30s, he took up tai chi,
+      which became the inspiration for his famous 62-piece
+      Tai Chi Series, a collection of abstract outdoor statues
+      including Tai Chi Arch.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Onsen Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'08.8"N 156°54'54.7"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Tai Chi Arch is nestled in the Onsen Garden of Sensei Lāna'i.
+      From the lobby enter the rear garden and follow along the lake to the right. 
+      At the far end, follow a small brook to the Onsen Garden.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/Vpf9JhF4yxtoQ6pm6',
+    }}
+  />
+</Layout>
