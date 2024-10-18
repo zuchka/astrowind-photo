@@ -1,0 +1,92 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Castel Cocoface',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="castel-cocoface-main"
+    alt="Cocoface sculpture by Castel"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'COCOFACE',
+      artist: 'GUILLAUME CASTEL',
+      date: '2014',
+      description: `
+        Guillaume Castel’s Cocoface greets us as we
+        enter the inner garden. The weathering steel,
+        (often called COR-TEN) exterior is coarse and
+        gritty, whereas the painted lime-green interior is
+        bright and smooth. It’s as if the steel really were
+        a rough husk that had been cleaved to expose a
+        bright, exuberant flesh.
+        <br><br>
+        Like Botero’s Dancers, balance seems critical
+        here, only Cocoface is balancing two extreme
+        environments. And in that way, the sculpture
+        recalls the very island of Lāna'i: a place rugged yet
+        beautiful; rough, yet lush.
+      `,
+      material: 'weathering steel and paint',
+      copyright: '© Guillaume Castel',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="castel-cocoface-detail-1"
+    alt="Detail of Cocoface sculpture"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtistBio
+    artist="GUILLAUME CASTEL"
+    lifespan="1980 - "
+    nationality="French"
+    description=`
+      Guillaume Castel is a French-born sculptor who lives and
+      works in Plouégat-Guérand, France. He uses natural and
+      organic shapes and materials such as wood, concrete,
+      brass and steel to depict nature and landscapes from his
+      home region of Brittany. 
+      <br><br>
+      Geometrical shapes designed in
+      raw materials describe nature, its fragility and elegance.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'07.0"N 156°55'01.4"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Cocoface is nestled in the rear garden between the main lobby and the guest wing. 
+      Walk around the koi pond until you are behind Nobu.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/cd65oqqaMwXL8jG67',
+    }}
+  />
+</Layout>
