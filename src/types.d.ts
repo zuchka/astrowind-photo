@@ -258,6 +258,14 @@ export interface ArtistBio extends Omit<Headline, 'classes'>, Widget {
   callToAction?: CallToAction;
 }
 
+export interface ArtworkLocation extends Omit<Headline, 'classes'>, Widget {
+  hotelLocation?: string;
+  gpsCoordinates?: string;
+  terrain?: string;
+  description?: string;
+  callToAction?: CallToAction;
+}
+
 export interface Testimonials extends Omit<Headline, 'classes'>, Widget {
   testimonials?: Array<Testimonial>;
   callToAction?: CallToAction;
