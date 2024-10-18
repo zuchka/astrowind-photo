@@ -1,0 +1,97 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Koons Aphrodite',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="aphrodite-main"
+    alt="Aphrodite sculpture by Jeff Koons"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'APHRODITE',
+      artist: 'JEFF KOONS',
+      date: '2016-2021',
+      description: `
+        A lithe and nubile woman stands in the Sensei Great
+        Hall. She looks down and to the left in a demure sort of
+        way, hiding her face with her forearm.
+        <br><br>
+        Koons' Aphrodite is based on a porcelain
+        figurine designed by Elly Strobach König for the
+        Czechoslovakian Royal Dux Company. Now greatly
+        enlarged and polished to a mirror finish, Aphrodite
+        transforms into a shimmering ideal. At Sensei, she also
+        becomes a point of reflection for guests: on beauty, on
+        identity, and on the human form.
+      `,
+      material: `mirror-polished stainless steel with transparent color coating`,
+      copyright: '© Jeff Koons',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_blank',
+        text: 'Learn More',
+        href: '#',
+      },
+    }}
+  />
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="aphrodite-detail-1"
+    alt="Aphrodite"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtistBio
+    artist="JEFF KOONS"
+    lifespan="1955 - "
+    nationality="American"
+    description=`
+      Jeff Koons was born in York, Pennsylvania in 1955.
+      He studied at the Maryland Institute College of Art in
+      Baltimore and the School of the Art Institute of Chicago.
+      He received a BFA from the Maryland Institute College
+      of Art in 1976. Koons lives and works in New York City.
+      <br><br>
+      Koons is widely known for his iconic sculptures Rabbit
+      and Balloon Dog as well as the monumental floral
+      sculpture Puppy (1992), shown at Rockefeller Center
+      and permanently installed at the Guggenheim Bilbao.
+      Koons has received numerous awards and honors in
+      recognition of his cultural achievements.*
+      <br><br>
+      * biography information adapted from the official Jeff Koons website:
+      http://www.jeffkoons.com/biography-summary
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Great Hall, Sensei Lāna'i"
+    gpsCoordinates=`20°50'08.3"N 156°55'02.4"W`
+    terrain="Indoor"
+    description=`
+      Aphrodite stands in the center of the Great Hall of Sensei Lāna'i.
+      Enter the lobby and walk straight to find her.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/zuQ6S7myLQjuAjbg9',
+    }}
+  />
+</Layout>
