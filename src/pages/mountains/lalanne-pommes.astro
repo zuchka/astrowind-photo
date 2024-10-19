@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: `Lalanne Pomme d'Hiver`
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="lalanne-pommes-main"
+    alt="Lalanne Pomme d'Hiver"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: `POMME D'HIVER`,
+      artist: 'CLAUDE LALANNE',
+      date: '2008',
+      description: `
+        Claude Lalanne’s Pomme d’Hiver represents the
+        second work by a woman artist in this sculpture
+        collection and the last of its apples. Standing near
+        Lalanne’s Winter Apple, we can make out Donna
+        Seduta and her own clenched fruit. Not far away
+        stand Adam and Eve, where we began.
+        <br><br>
+        Lalanne’s work is famous for its humor and
+        whimsy, if not a certain surrealist bent.
+      `,
+      material: 'bronze',
+      copyright: '© Claude Lalanne',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="CLAUDE LALANNE"
+    lifespan="1924 - 2019"
+    nationality="French"
+    description=`
+      French artist Claude Lalanne is famous for her whimsical
+      creations of sculpture, furniture and jewelry inspired by
+      nature. Claude worked in side-by-side studios with her
+      artist husband, Farnçois-Xavier Lalanne (1927–2008),
+      for nearly half a century, and together they produced
+      art under the collective name Les Lalanne. Her personal
+      work often manifests itself in the form of decorative
+      flora and she uses an electroplating technique to give
+      her work a highly detailed metallic surface.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'09.5"N 156°55'03.0"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Heart of Rivers is nestled in the rear garden of Sensei Lāna'i.
+      Look near the veranda walkway connecting the main house to the western wing.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/2UfqrhmXUhTP1yVa6',
+    }}
+  />
+</Layout>
