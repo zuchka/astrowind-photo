@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Botero Adam & Eve',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="plensa-heart-rivers-main"
+    alt="Plensa Heart Rivers"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'HEART OF RIVERS',
+      artist: 'JAUME PLENSA',
+      date: '2016',
+      description: `
+        Nestled into a palm grove we find seven seated
+        men. They are hugging their tucked-in knees,
+        which in turn are framing a palm trunk. They
+        embrace the tree, while their faces nearly touch
+        its surface. As Heart of Rivers grows, so does this
+        interaction. 
+        <br><br>
+        Each sculpture, a self-portrait of the
+        artist Jaume Plensa, is covered in text in raised
+        relief. Like the Polynesian tradition of tattoo, the
+        names of great rivers cover their bodies. We hear
+        a flowing creek nearby. We are left, perhaps, to
+        contemplate how energy channels up a trunk, or
+        down a stream.
+      `,
+      material: 'bronze',
+      copyright: '© Jaume Plensa',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="JAUME PLENSA"
+    lifespan="1955 - "
+    nationality="Spanish"
+    description=`
+      Born in Barcelona, Jaume Plensa is best known for his
+      sculptures of human faces, heads and figures. Much
+      of his work is designed to be displayed and interacted
+      with in public spaces as a means of unifying individuals.
+      <br><br>
+      Plensa frequently weaves words and numbers into his work. He also
+      blends conventional materials with unconventional
+      media such as water, light and sound as a reflection of
+      energy and human connection.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'07.3"N 156°54'59.5"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Heart of Rivers is nestled in the rear garden of Sensei Lāna'i.
+      Leave the lobby and head around the koi pond to find it.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/9P8X4BJTDUtBJ2fH7',
+    }}
+  />
+</Layout>
