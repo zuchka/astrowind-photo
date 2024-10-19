@@ -1,0 +1,89 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Botero Adam & Eve',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="botero-reclining-1993-main"
+    alt="Botero Reclining Woman 1993"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'RECLINING WOMAN',
+      artist: 'FERNANDO BOTERO',
+      date: '1993',
+      description: `
+        In the shade of the banyan, near the wide lanai
+        that snakes around the old Ranch house, we find
+        the first of three reclining women by Botero.
+        <br><br>
+        The recumbent nude, as it is sometimes known,
+        is a theme as old as antiquity. Botero works from
+        that great tradition, which has always embraced
+        the body, but his reclining women are especially
+        confident and self-possessed. With that hand
+        behind her head, note how the Woman’s chest
+        now heaves toward the canopy. It looks as if she
+        were about to sigh, lazing on that pile of thick,
+        flowing drapery.
+      `,
+      material: 'bronze',
+      copyright: '© Fernando Botero',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="FERNANDO BOTERO"
+    lifespan="1932 - 2023"
+    nationality="Columbian"
+    description=`
+      Fernando Botero’s signature style of creating sculptures
+      with exaggerated and inflated features, suggesting
+      political criticism and satire, coined a new term in the
+      art world: “Boterismo.”
+      <br><br>
+      The Columbian artist, well known
+      for representing women, men, daily life, and historical
+      events with wit and irony, began his career as a painter
+      experimenting with proportion and size with his
+      paintings of round, corpulent humans, before switching
+      to sculpture in the 1970s.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Front Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'08.9"N 156°55'03.5"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Reclining Woman, 1993 is nestled in the front garden of Sensei Lāna'i.
+      Leave the lobby and take the path under the veranda to the right.
+      You will see her over the railing.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/os4Ys422EeSpzu3P8',
+    }}
+  />
+</Layout>
