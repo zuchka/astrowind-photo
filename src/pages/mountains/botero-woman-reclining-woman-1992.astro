@@ -1,0 +1,86 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Botero Reclining Woman 1992',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="botero-reclining-1992-main"
+    alt="Reclining Woman sculpture by Fernando Botero"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'RECLINING WOMAN',
+      artist: 'FERNANDO BOTERO',
+      date: '1992',
+      description: `
+        With that same hand behind her head and that
+        same unflappable confidence, Botero’s second
+        Reclining Woman twists up to meet our gaze.
+        There is that trademark playfulness, yes, but so
+        often Botero captures something more—a kind
+        of insistent focus. 
+        <br><br>
+        These figures, if nothing else,
+        seem intent on doing whatever it is we’ve caught
+        them doing. Botero’s work, much like the larger
+        Sensei mission, is one great study in mindfulness.
+      `,
+      material: 'bronze',
+      copyright: '© Fernando Botero',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="FERNANDO BOTERO"
+    lifespan="1932 - 2023"
+    nationality="Columbian"
+    description=`
+      Fernando Botero’s signature style of creating sculptures
+      with exaggerated and inflated features, suggesting
+      political criticism and satire, coined a new term in the
+      art world: “Boterismo.”
+      <br><br>
+      The Columbian artist, well known
+      for representing women, men, daily life, and historical
+      events with wit and irony, began his career as a painter
+      experimenting with proportion and size with his
+      paintings of round, corpulent humans, before switching
+      to sculpture in the 1970s.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Front Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'07.0"N 156°55'02.6"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Adam and Eve are nestled in the front garden of Sensei Lāna'i.
+      Leave the main lobby and take the path under the verand to the left.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/Mu45p5m53CXhLKxv6',
+    }}
+  />
+</Layout>
