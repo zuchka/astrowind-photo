@@ -1,0 +1,88 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Plensa Talaia',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="plensa-talaia-main"
+    alt="Plensa Talaia"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'TALAIA',
+      artist: 'JAUME PLENSA',
+      date: '2016',
+      description: `
+        Approaching the rear of the lobby, beside the koi pond
+        that borders Nobu, look toward the mountain and
+        behold Jaume Plensa’s Talaia gazing back. Like Cautha,
+        Talaia’s eyes are closed. And like so many other works
+        here, Talaia too plays with scale and perspective. Her
+        features, from this vantage point, appear elongated. But
+        from the edges of the garden, Talaia’s distortions fade
+        and she appears proportional.
+        <br><br>
+        This effect, anamorphosis, has a rich tradition in western
+        art. By creating a skewed perspective that requires
+        the viewer to assume a specific vantage point before
+        the image resolves, Plensa’s Talaia encourages us to
+        question how space and perspective mediate our world.
+      `,
+      material: 'fiberglass reinforced polyester and marble dust',
+      copyright: '© Jaume Plensa',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="JAUME PLENSA"
+    lifespan="1955 - "
+    nationality="Spanish"
+    description=`
+      Born in Barcelona, Jaume Plensa is best known for his
+      sculptures of human faces, heads and figures. Much
+      of his work is designed to be displayed and interacted
+      with in public spaces as a means of unifying individuals.
+      <br><br>
+      Plensa frequently weaves words and numbers into his work. He also
+      blends conventional materials with unconventional
+      media such as water, light and sound as a reflection of
+      energy and human connection.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'13.2"N 156°54'55.1"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Talaia is nestled in the rear garden of Sensei Lāna'i.
+      You must hike up to it from behind the treatment rooms.
+      Follow the path past the yoga studio and follow the signs up the trail.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/2YJyQtSJgXk5no399',
+    }}
+  />
+</Layout>
