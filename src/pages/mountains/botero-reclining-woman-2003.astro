@@ -1,0 +1,89 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Botero Reclining Woman 2003',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="botero-reclining-2003-main"
+    alt="Reclining Woman sculpture by Fernando Botero"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'RECLINING WOMAN',
+      artist: 'FERNANDO BOTERO',
+      date: '2003',
+      description: `
+        The sheer exuberance and voluptuousness of
+        Botero’s third Reclining Woman is undeniable.
+        She is unabashed. Her forms are voluminous and
+        exaggerated, and yet those torqueing limbs feel
+        soft and buoyant—never inert or leaden.
+        <br><br>
+        While Botero’s second Woman sits up, his third
+        lies down. Sometimes the massiveness of these
+        forms can camouflage their detail. Note this
+        Woman’s stylized hair, itself reduced to parallel
+        grooves, and how that creates a powerful
+        abstraction. She, Botero’s final figure, welcomes
+        us to Sensei’s inner garden.
+      `,
+      material: 'bronze',
+      copyright: '© Fernando Botero',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="FERNANDO BOTERO"
+    lifespan="1932 - 2023"
+    nationality="Columbian"
+    description=`
+      Fernando Botero’s signature style of creating sculptures
+      with exaggerated and inflated features, suggesting
+      political criticism and satire, coined a new term in the
+      art world: “Boterismo.”
+      <br><br>
+      The Columbian artist, well known
+      for representing women, men, daily life, and historical
+      events with wit and irony, began his career as a painter
+      experimenting with proportion and size with his
+      paintings of round, corpulent humans, before switching
+      to sculpture in the 1970s.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Front Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'06.3"N 156°55'02.3"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Adam and Eve are nestled in the front garden of Sensei Lāna'i.
+      Leave the main lobby and take the path under the verand to the left.
+      Find them near Botero's Dancers.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/XEuibmLsBgjxy2AZ9',
+    }}
+  />
+</Layout>
