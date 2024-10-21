@@ -1,0 +1,81 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Quinn Burning Desire',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="burning-desire-main"
+    alt="Quinn Burning Desire"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'BURNING DESIRE',
+      artist: 'MARC QUINN',
+      date: '2017',
+      description: `
+        The inherent sensuality of nature is highlighted
+        in Marc Quinn’s monumental Burning Desire,
+        a painted bronze sculpture representing
+        a phalaenopsis orchid. The scale and
+        monumentality of the object has a transformative
+        effect on the space.
+        <br><br>
+        Walk along the pond’s edge and investigate this
+        massive flower, much like a honeybee in search of
+        nectar.
+      `,
+      material: 'painted bronze',
+      copyright: '© Marc Quinn',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="MARC QUINN"
+    lifespan="1964 - "
+    nationality="British"
+    description=`
+      Marc Quinn is a British contemporary artist from London
+      known for his sculptures, installations and paintings.
+      His work explores "what it is to be human in the world
+      today" through subjects including the body, genetics,
+      identity, environment and the media, using a variety
+      of traditional and nontraditional materials, from blood,
+      bread and flowers to marble and stainless steel.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'10.5"N 156°54'58.5"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Burning Desire rests upon the edge of the lake in the rear garden of Sensei Lāna'i.
+      Look for it in front of the spa hales.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/HzBo9pkjNV2yVWkw9',
+    }}
+  />
+</Layout>
