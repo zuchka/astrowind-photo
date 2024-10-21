@@ -1,0 +1,82 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Lobo L\'Île du Levant',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="castel-cocoface-detail-1"
+    alt="Lobo L\'Île du Levant"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'L\'ÎLE DU LEVANT',
+      artist: 'BALTASAR LOBO',
+      date: '1991',
+      description: `
+        With Lobo’s L’Île du Levant we encounter our next
+        reclining woman. Lobo’s Women shirk the robust
+        and exaggerated corpulence of Botero’s. Instead,
+        they are smoother and more fluid.
+        <br><br>
+        With L’Île du Levant we find a woman propped
+        up on her elbow. She appears to be basking, like
+        a typical sunbather on the actual Levant Island,
+        one of the famed “Golden Isles” of the French
+        Mediterranean.
+      `,
+      material: 'bronze',
+      copyright: '© Baltasar Lobo',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="BALTASAR LOBO"
+    lifespan="1910 - 1993"
+    nationality="Spanish"
+    description=`
+      Baltasar Lobo was a Spanish artist known for his
+      sculptures depicting the female form. He became part
+      of the avant-garde in Paris, befriending Pablo Picasso
+      and artist Henri Laurens and showing at galleries
+      with Matisse and Leger. 
+      <br><br>
+      He was influenced by Paris’s modernist art scene as well as ancient art and sculpture,
+      which is reflected in his abstract forms.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'11.8"N 156°54'57.9"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      L'Île du Levant is nestled in the rear garden of Sensei Lāna'i.
+      It stands in front of the spa hales along with four other sculptures by Lobo.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/hQcLxJBQmjo8wksc7',
+    }}
+  />
+</Layout>
