@@ -1,0 +1,91 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Young Cautha',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="young-cautha-main"
+    alt="Cautha sculpture by Emily Young"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'CAUTHA',
+      artist: 'EMILY YOUNG',
+      date: '2012',
+      description: `
+        Emily Young’s stunning Cautha stands guard near the
+        Onsen Garden. The clastic onyx, with its deep fissures
+        and dark inclusions, reveals the eons that passed while
+        this mineral took shape. With her eyes shut, Cautha
+        gazes inwardly, as if she were contemplating the time
+        and energy it took to create her own form. Be still with
+        Cautha. Listen to the stream and examine the colored
+        bands that streak across her somber face.
+        <br><br>
+        Cautha, incidentally, is the name of the Etruscan
+        goddess of the sun. She is, then, a steward of energy,
+        and an embodiment of it too, much like the ageless
+        stone that Young has carved.
+      `,
+      material: 'clastic onyx',
+      copyright: '© Emily Young',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="adam-eve-detail-1"
+    alt="Detail of Adam & Eve sculpture"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtistBio
+    artist="EMILY YOUNG"
+    lifespan="1952 - "
+    nationality="British"
+    description=`
+      Born into a family of artists, British artist Emily Young
+      trained first as a painter and then began carving stone
+      in the early 1980s. Many of her sculptures are inspired
+      by art of the ancient world and emphasize the natural
+      beauty of raw stone. She creates meditative, figural
+      works that speak to time, nature, memory and man’s
+      relationship to the Earth.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'08.9"N 156°54'54.6"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Cautha is near the Onsen Garden on the rear ground of Sensei Lāna'i.
+      Look across the small brook leading to the onsens.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/3RLPyJd5PBdvSDuj8',
+    }}
+  />
+</Layout>
