@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Shapiro Untitled',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="shapiro-main"
+    alt="Shapiro Untitled"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'UNTITLED',
+      artist: 'SHAPIRO',
+      date: '2014-2017',
+      description: `
+        Joel Shapiro’s abstract geometric works have
+        marked him as a pioneer of modern sculpture
+        since the 1970s. Inspired by the body in motion,
+        Shapiro’s Untitled, like so many other works
+        here, challenges our sense of how we occupy
+        space.
+        <br><br>
+        Canted to one side, the work achieves a
+        delicate balance. With such poise, it’s only fitting
+        that Untitled should stand so near Sensei’s yoga
+        pavilion.
+      `,
+      material: 'painted bronze',
+      copyright: '© Joel Shapiro',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="JOEL SHAPIRO"
+    lifespan="1941 - "
+    nationality="American"
+    description=`
+      Born in New York City, Joel Shapiro is best known for his
+      abstract geometric sculptures. Shapiro’s work is inspired
+      by the body in motion and challenges our sense of how
+      we occupy space.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'09.3"N 156°54'56.0"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Talaia is nestled in the rear garden of Sensei Lāna'i.
+      You must hike up to it from behind the treatment rooms.
+      Follow the path past the yoga studio and follow the signs up the trail.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/ns8bTt9tPW3RiBHH6',
+    }}
+  />
+</Layout>
