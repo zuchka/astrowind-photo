@@ -1,0 +1,84 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Lobo Grande Jeune Fille à Genoux',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="castel-cocoface-detail-1"
+    alt="Lobo Grande Jeune Fille à Genoux"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'GRANDE JEUNE FILLE À GENOIX',
+      artist: 'BALTASAR LOBO',
+      date: '1993',
+      description: `
+        Baltasar Lobo often represented mothers and
+        children. Before the first Hale we find Baltasar
+        Lobo’s Young Girl Brushing Her Hair. The scene
+        of a young woman at her toilette is a common one
+        in Western art. Lobo’s friend and contemporary,
+        Pablo Picasso, enjoyed the motif greatly.
+        <br><br>
+        Caressing her long, thickly plaited hair, we find
+        this young woman engaged in self-care. There is
+        a sense of nurturing in much of Lobo’s work; and
+        nurturing is what one will always find inside these
+        Hales.
+      `,
+      material: 'bronze',
+      copyright: '© Baltasar Lobo',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="BALTASAR LOBO"
+    lifespan="1910 - 1993"
+    nationality="Spanish"
+    description=`
+      Baltasar Lobo was a Spanish artist known for his
+      sculptures depicting the female form. He became part
+      of the avant-garde in Paris, befriending Pablo Picasso
+      and artist Henri Laurens and showing at galleries
+      with Matisse and Leger. 
+      <br><br>
+      He was influenced by Paris’s modernist art scene as well as ancient art and sculpture,
+      which is reflected in his abstract forms.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'13.8"N 156°54'59.7"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Grande Jeune Fille à Genoux is nestled in the rear garden of Sensei Lāna'i.
+      It stands in front of the spa hales along with four other sculptures by Lobo.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/AFmccTLk17UhED8M8',
+    }}
+  />
+</Layout>
