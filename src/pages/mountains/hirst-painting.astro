@@ -1,0 +1,85 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Hirst Cherry Blossoms',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="lanai/mountains/hirst-blossoms-main"
+    alt="Hirst Cherry Blossoms"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'CHERRY BLOSSOMS',
+      artist: 'DAVID HIRST',
+      date: '2016',
+      description: `
+        Approaching the rear of the lobby, beside the koi pond
+        that borders Nobu, look toward the mountain and
+        behold Jaume Plensa’s Talaia gazing back. Like Cautha,
+        Talaia’s eyes are closed. And like so many other works
+        here, Talaia too plays with scale and perspective. Her
+        features, from this vantage point, appear elongated. But
+        from the edges of the garden, Talaia’s distortions fade
+        and she appears proportional.
+        <br><br>
+        This effect, anamorphosis, has a rich tradition in western
+        art. By creating a skewed perspective that requires
+        the viewer to assume a specific vantage point before
+        the image resolves, Plensa’s Talaia encourages us to
+        question how space and perspective mediate our world.
+      `,
+      material: 'oil on canvas and cherry blossoms',
+      copyright: '© David Hirst',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtworkImage
+    class="rounded-lg"
+    src="lanai/mountains/hirst-blossoms-detail"
+    alt="David Hirst Cherry Blossoms Detail"
+    width="896"
+    height="896"
+  />
+  <ArtistBio
+    artist="DAVID HIRST"
+    lifespan="1965 - "
+    nationality="British"
+    description=`
+      TK
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Grand Lobby, Sensei Lāna'i"
+    gpsCoordinates=`20°50'08.1"N 156°55'02.0"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Cherry Blossoms hangs in the Grand Lobby of Sensei Lāna'i.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/KQVDTFyFu6qagqvE9',
+    }}
+  />
+</Layout>
