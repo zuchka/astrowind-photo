@@ -1,0 +1,83 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Lobo Piece d\'Eau',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="castel-cocoface-detail-1"
+    alt="Lobo Piece d\'Eau"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'PIECE D\'EAU',
+      artist: 'BALTASAR LOBO',
+      date: '1972-73',
+      description: `
+        With Pièce d'Eau also known as Pond or Water
+        Feature, we encounter another recumbent nude:
+        the most fragmentary and dynamic one yet. She is
+        perched on one hip while her torso twists toward
+        us. 
+        <br><br>
+        There is something sensual and alive about
+        this body. The balance that the figure achieves,
+        up on that one haunch, is no less impressive than
+        the balance Lobo strikes between abstraction and
+        figuration.
+      `,
+      material: 'bronze',
+      copyright: '© Baltasar Lobo',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="BALTASAR LOBO"
+    lifespan="1910 - 1993"
+    nationality="Spanish"
+    description=`
+      Baltasar Lobo was a Spanish artist known for his
+      sculptures depicting the female form. He became part
+      of the avant-garde in Paris, befriending Pablo Picasso
+      and artist Henri Laurens and showing at galleries
+      with Matisse and Leger. 
+      <br><br>
+      He was influenced by Paris’s modernist art scene as well as ancient art and sculpture,
+      which is reflected in his abstract forms.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'12.8"N 156°54'58.6"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Piece d'Eau is nestled in the rear garden of Sensei Lāna'i.
+      It stands in front of the spa hales along with four other sculptures by Lobo.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/rNMxZsR8UygLrnn89',
+    }}
+  />
+</Layout>
