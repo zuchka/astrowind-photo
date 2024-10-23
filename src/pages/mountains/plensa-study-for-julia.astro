@@ -1,0 +1,73 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Plensa Study for Julia',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="plensa-study-for-julia-main"
+    alt="Plensa Study for Julia"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'STUDY FOR JULIA',
+      artist: 'JAUME PLENSA',
+      date: '2016',
+      description: `
+        TK
+      `,
+      material: 'fiberglass reinforced polyester and marble dust',
+      copyright: '© Jaume Plensa',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="JAUME PLENSA"
+    lifespan="1955 - "
+    nationality="Spanish"
+    description=`
+      Born in Barcelona, Jaume Plensa is best known for his
+      sculptures of human faces, heads and figures. Much
+      of his work is designed to be displayed and interacted
+      with in public spaces as a means of unifying individuals.
+      <br><br>
+      Plensa frequently weaves words and numbers into his work. He also
+      blends conventional materials with unconventional
+      media such as water, light and sound as a reflection of
+      energy and human connection.
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Lobby, Hotel Lāna'i"
+    gpsCoordinates=`20°49'31.0"N 156°55'01.8"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Study for Julia is in the lobby of Hotel Lāna'i.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/ChBpmRfmSNJfXKty8',
+    }}
+  />
+</Layout>
