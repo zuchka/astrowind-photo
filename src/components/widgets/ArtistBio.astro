@@ -8,7 +8,6 @@ const {
   lifespan = '',
   nationality = '',
   description = '',
-  callToAction = {},
   id,
   isDark = false,
   classes = {},
@@ -40,14 +39,11 @@ const {
             </div>
             <div class="flex justify-between items-center mt-auto">
               <Button variant="secondary" text="Return to Gallery" href="/mountains/landing" />
-              {callToAction && (
-                typeof callToAction === 'string' ? (
-                  <div set:html={callToAction} />
-                ) : (
-                  callToAction &&
-                  callToAction.href && <Button {...callToAction} />
-                )
-              )}
+              <Button
+                target="_self"
+                text="Locate Work"
+                href="#location"
+              />
             </div>
           </div>
         </div>
