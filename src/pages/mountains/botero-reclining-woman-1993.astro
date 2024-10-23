@@ -4,6 +4,7 @@ import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+import { FERNANDO_BOTERO } from '~/data/artistBios';
 
 const metadata = {
   title: 'Botero Reclining Woman 1993',
@@ -21,7 +22,7 @@ const metadata = {
   <ArtworkDetails
     artworkDetails={{
       title: 'RECLINING WOMAN',
-      artist: 'FERNANDO BOTERO',
+      artist: FERNANDO_BOTERO.artist,
       date: '1993',
       description: `
         In the shade of the banyan, near the wide lanai
@@ -39,7 +40,7 @@ const metadata = {
         flowing drapery.
       `,
       material: 'bronze',
-      copyright: '© Fernando Botero',
+      copyright: FERNANDO_BOTERO.copyright,
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
         target: '_self',
@@ -49,22 +50,10 @@ const metadata = {
     }}
   />
   <ArtistBio
-    artist="FERNANDO BOTERO"
-    lifespan="1932 - 2023"
-    nationality="Columbian"
-    description=`
-      Fernando Botero’s signature style of creating sculptures
-      with exaggerated and inflated features, suggesting
-      political criticism and satire, coined a new term in the
-      art world: “Boterismo.”
-      <br><br>
-      The Columbian artist, well known
-      for representing women, men, daily life, and historical
-      events with wit and irony, began his career as a painter
-      experimenting with proportion and size with his
-      paintings of round, corpulent humans, before switching
-      to sculpture in the 1970s.
-    `
+    artist={FERNANDO_BOTERO.artist}
+    lifespan={FERNANDO_BOTERO.lifespan}
+    nationality={FERNANDO_BOTERO.nationality}
+    description={FERNANDO_BOTERO.description}
   />
   <ArtworkLocation
     hotelLocation="MOUNTAINS: Front Garden, Sensei Lāna'i"
