@@ -4,6 +4,7 @@ import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+import { JAUME_PLENSA } from '~/data/artistBios';
 
 const metadata = {
   title: 'Plensa Study for Julia',
@@ -22,13 +23,13 @@ const metadata = {
   <ArtworkDetails
     artworkDetails={{
       title: 'STUDY FOR JULIA',
-      artist: 'JAUME PLENSA',
+      artist: JAUME_PLENSA.artist,
       date: '2016',
       description: `
         TK
       `,
       material: 'fiberglass reinforced polyester and marble dust',
-      copyright: '© Jaume Plensa. Courtesy of the artist and Cambridge Art Gallery',
+      copyright: JAUME_PLENSA.copyright,
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
         target: '_self',
@@ -38,20 +39,10 @@ const metadata = {
     }}
   />
   <ArtistBio
-    artist="JAUME PLENSA"
-    lifespan="1955 - "
-    nationality="Spanish"
-    description=`
-      Born in Barcelona, Jaume Plensa is best known for his
-      sculptures of human faces, heads and figures. Much
-      of his work is designed to be displayed and interacted
-      with in public spaces as a means of unifying individuals.
-      <br><br>
-      Plensa frequently weaves words and numbers into his work. He also
-      blends conventional materials with unconventional
-      media such as water, light and sound as a reflection of
-      energy and human connection.
-    `
+    artist={JAUME_PLENSA.artist}
+    lifespan={JAUME_PLENSA.lifespan}
+    nationality={JAUME_PLENSA.nationality}
+    description={JAUME_PLENSA.description}
   />
   <ArtworkLocation
     hotelLocation="MOUNTAINS: Lobby, Hotel Lāna'i"

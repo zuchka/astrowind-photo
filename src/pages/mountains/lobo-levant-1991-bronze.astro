@@ -4,6 +4,7 @@ import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+import { BALTASAR_LOBO } from '~/data/artistBios';
 
 const metadata = {
   title: 'Lobo L\'Île du Levant',
@@ -22,7 +23,7 @@ const metadata = {
   <ArtworkDetails
     artworkDetails={{
       title: 'L\'ÎLE DU LEVANT',
-      artist: 'BALTASAR LOBO',
+      artist: BALTASAR_LOBO.artist,
       date: '1991',
       description: `
         Before another Hale we encounter the second of
@@ -33,7 +34,7 @@ const metadata = {
         blends into a lush copse of ferns.
       `,
       material: 'bronze',
-      copyright: '© 2022 Artists Rights Society (ARS), New York / VEGAP, Madrid',
+      copyright: BALTASAR_LOBO.copyright,
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
         target: '_self',
@@ -43,19 +44,10 @@ const metadata = {
     }}
   />
   <ArtistBio
-    artist="BALTASAR LOBO"
-    lifespan="1910 - 1993"
-    nationality="Spanish"
-    description=`
-      Baltasar Lobo was a Spanish artist known for his
-      sculptures depicting the female form. He became part
-      of the avant-garde in Paris, befriending Pablo Picasso
-      and artist Henri Laurens and showing at galleries
-      with Matisse and Leger. 
-      <br><br>
-      He was influenced by Paris’s modernist art scene as well as ancient art and sculpture,
-      which is reflected in his abstract forms.
-    `
+    artist={BALTASAR_LOBO.artist}
+    lifespan={BALTASAR_LOBO.lifespan}
+    nationality={BALTASAR_LOBO.nationality}
+    description={BALTASAR_LOBO.description}
   />
   <ArtworkLocation
     hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
