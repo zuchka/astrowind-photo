@@ -1,229 +1,168 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import LandingHeader from '~/components/widgets/LandingHeader.astro';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'Mountains Landing Page',
 };
 ---
 
 <Layout metadata={metadata}>
-  <div class="max-w-4xl mx-auto px-4">
-    <a href="/mountains/botero-adam-eve">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lanai/mountains/adam-eve/main-1"
-        alt="Botero Adam & Eve"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/koons-aphrodite" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="aphrodite-detail-1"
-        alt="Koons Aphrodite"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/ming-tai-chi-arch" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="ju-ming-arch-main"
-        alt="Ju Ming Arch"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/castel-cocoface" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="castel-cocoface-detail-1"
-        alt="Cocoface"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/botero-woman-on-horse" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="botero-woman-on-horse-main"
-        alt="Botero Woman on Horse"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/shapiro-untitled" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="shapiro-main"
-        alt="Shapiro"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/quinn-burning-desire" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="burning-desire-main"
-        alt="Burning Desire"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/young-cautha" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="young-cautha-detail-1"
-        alt="Young Cautha"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/botero-dancers" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="botero-dancers-main"
-        alt="Botero Dancers"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/lalanne-pommes" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lalanne-pommes-main"
-        alt="Lalanne Pommes"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/plensa-talaia" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="2016.103_Plensa_2021_0317_PS_v2_psmeiz"
-        alt="Plensa Talaia"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/botero-reclining-woman-2003" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="botero-reclining-2003-main"
-        alt="Botero Reclining Woman 2003"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/botero-reclining-woman-1992" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="botero-reclining-1992-main"
-        alt="Botero Reclining Woman 1992"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/botero-donna-seduta" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="botero-donna-seduta"
-        alt="Botero Donna Seduta"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/botero-reclining-woman-1993" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="botero-reclining-1993-main"
-        alt="Botero Reclining Woman 1993"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/plensa-heart-of-rivers" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="plensa-heart-rivers-main"
-        alt="Plensa Heart Rivers"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/lobo-piece-deau" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lobo-piece-deau-main"
-        alt="Lobo Piece d\'Eau"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/lobo-levant-1991-bronze" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lobo-levant-bronze-main"
-        alt="Lobo Levant 1991 Bronze"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/lobo-levant-1991-green" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lobo-levant-green-main"
-        alt="Lobo Levant 1991 Green"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/lobo-jeune-fille-se-coiffant" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lobo-fille-se-coiffant-main"
-        alt="Lobo Jeune Fille Se Coiffant"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/lobo-grand-jeune-fille" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lobo-fille-a-genoux-detail"
-        alt="Lobo Grand Jeune Fille"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/plensa-study-for-julia" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="plensa-study-for-julia-main"
-        alt="Plensa Study for Julia"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/plensa-talaia-maquette" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="talaia-maquette-main"
-        alt="Plensa Talaia Maquette"
-        width="896"
-        height="896"
-      />
-    </a>
-    <a href="/mountains/hirst-painting" class="block pt-4">
-      <ArtworkImage
-        class="rounded-lg"
-        src="lanai/mountains/hirst-blossoms-main"
-        alt="Hirst Cherry Blossoms"
-        width="896"
-        height="896"
-      />
-    </a>
-  </div>
+  <LandingHeader
+    region="THE MOUNTAINS"
+    caption=`There are 25 main artworks in the mountains of Lanai. You can find all of them on the grounds of Sensei Lāna'i, A Four Seasons Resort. 
+      <br /><br />
+      Click any image below for artwork, artist, and location details.`
+  />
+  <a href="/mountains/botero-adam-eve">
+    <ArtworkImage
+      class="rounded-lg"
+      src="lanai/mountains/adam-eve/main-1"
+      alt="Botero Adam & Eve"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/koons-aphrodite" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="aphrodite-detail-1" alt="Koons Aphrodite" width="896" height="896" />
+  </a>
+  <a href="/mountains/ming-tai-chi-arch" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="ju-ming-arch-main" alt="Ju Ming Arch" width="896" height="896" />
+  </a>
+  <a href="/mountains/castel-cocoface" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="castel-cocoface-detail-1" alt="Cocoface" width="896" height="896" />
+  </a>
+  <a href="/mountains/botero-woman-on-horse" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="botero-woman-on-horse-main"
+      alt="Botero Woman on Horse"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/shapiro-untitled" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="shapiro-main" alt="Shapiro" width="896" height="896" />
+  </a>
+  <a href="/mountains/quinn-burning-desire" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="burning-desire-main" alt="Burning Desire" width="896" height="896" />
+  </a>
+  <a href="/mountains/young-cautha" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="young-cautha-detail-1" alt="Young Cautha" width="896" height="896" />
+  </a>
+  <a href="/mountains/botero-dancers" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="botero-dancers-main" alt="Botero Dancers" width="896" height="896" />
+  </a>
+  <a href="/mountains/lalanne-pommes" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="lalanne-pommes-main" alt="Lalanne Pommes" width="896" height="896" />
+  </a>
+  <a href="/mountains/plensa-talaia" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="2016.103_Plensa_2021_0317_PS_v2_psmeiz"
+      alt="Plensa Talaia"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/botero-reclining-woman-2003" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="botero-reclining-2003-main"
+      alt="Botero Reclining Woman 2003"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/botero-reclining-woman-1992" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="botero-reclining-1992-main"
+      alt="Botero Reclining Woman 1992"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/botero-donna-seduta" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="botero-donna-seduta" alt="Botero Donna Seduta" width="896" height="896" />
+  </a>
+  <a href="/mountains/botero-reclining-woman-1993" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="botero-reclining-1993-main"
+      alt="Botero Reclining Woman 1993"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/plensa-heart-of-rivers" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="plensa-heart-rivers-main"
+      alt="Plensa Heart Rivers"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/lobo-piece-deau" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="lobo-piece-deau-main" alt="Lobo Piece d\'Eau" width="896" height="896" />
+  </a>
+  <a href="/mountains/lobo-levant-1991-bronze" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="lobo-levant-bronze-main"
+      alt="Lobo Levant 1991 Bronze"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/lobo-levant-1991-green" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="lobo-levant-green-main"
+      alt="Lobo Levant 1991 Green"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/lobo-jeune-fille-se-coiffant" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="lobo-fille-se-coiffant-main"
+      alt="Lobo Jeune Fille Se Coiffant"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/lobo-grand-jeune-fille" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="lobo-fille-a-genoux-detail"
+      alt="Lobo Grand Jeune Fille"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/plensa-study-for-julia" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="plensa-study-for-julia-main"
+      alt="Plensa Study for Julia"
+      width="896"
+      height="896"
+    />
+  </a>
+  <a href="/mountains/plensa-talaia-maquette" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="talaia-maquette-main" alt="Plensa Talaia Maquette" width="896" height="896" />
+  </a>
+  <a href="/mountains/hirst-painting" class="block pt-4">
+    <ArtworkImage
+      class="rounded-lg"
+      src="lanai/mountains/hirst-blossoms-main"
+      alt="Hirst Cherry Blossoms"
+      width="896"
+      height="896"
+    />
+  </a>
 </Layout>

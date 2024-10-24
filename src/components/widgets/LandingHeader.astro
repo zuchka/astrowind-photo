@@ -1,0 +1,38 @@
+---
+// import type { LandingHeader as Props } from '~/types';
+
+interface Props {
+  region?: string;
+  caption?: string;
+  class?: string;
+}
+
+const { 
+  region,
+  caption,
+  class: className = '',
+} = Astro.props;
+
+const containerClasses = `mx-auto my-4 max-w-5xl px-4 sm:px-6 lg:px-8 ${className}`;
+
+---
+
+<div class={containerClasses}>
+  <div
+      class="max-w-4xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow"
+    >
+    <div class="text-left pt-3 px-4">
+      <h3 class="avenir-heavy text-xl font-semibold uppercase leading-6 tracking-wider mb-1">{region}</h3>
+    </div>
+    <div class="px-4 flex flex-col">
+        <div class="lg:flex lg:justify-between mb-4">
+          <div class="mt-4 lg:mt-0 lg:w-3/4 lg:pl-0">
+            <p
+              class="avenir-book text-lg leading-7 text-gray-600 dark:text-slate-400 text-left"
+              set:html={caption}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

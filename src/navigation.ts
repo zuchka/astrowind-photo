@@ -5,33 +5,13 @@ export const headerData = {
     {
       text: ' The Mountains',
       href: getPermalink('/mountains/landing'),
-      links: [
-        {
-          text: 'Map',
-          href: getPermalink('/mountains/map'),
-        },
-        {
-          text: 'Artworks',
-          href: getPermalink('/mountains/landing'),
-        },
-      ],
     },
     {
       text: 'The Sea',
       href: getPermalink('/sea/landing'),
-      links: [
-        {
-          text: 'Map',
-          href: getPermalink('/sea/map'),
-        },
-        {
-          text: 'Artworks',
-          href: getPermalink('/sea/landing'),
-        },
-      ],
     },
     {
-      text: 'Artist Bios',
+      text: 'Maps',
       href: getPermalink('/landing/lead-generation'),
       // links: [
       //   {
@@ -61,7 +41,7 @@ export const headerData = {
       // ],
     },
     {
-      text: 'Blog',
+      text: 'About',
       href: getPermalink('/landing/lead-generation'),
       // links: [
       //   {
@@ -99,27 +79,28 @@ export const footerData = {
     {
       title: `Lāna'i Art Collection`,
       links: [
+        { text: 'The Mountains', href: getPermalink('/mountains/landing') },
+        { text: 'The Sea', href: getPermalink('/sea/landing') },
+        { text: 'Maps', href: '#' },
         { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Press', href: '#' },
         { text: 'Book a Tour', href: '#' },
       ],
     },
     {
       title: `Pulama Lāna'i`,
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Mission', href: '#' },
-        { text: 'Contact', href: '#' },
+        { text: 'About', href: 'https://pulamalanai.com/#what-we-do' },
+        { text: 'Mission', href: 'https://pulamalanai.com/#future' },
+        { text: 'Contact', href: 'https://pulamalanai.com/#contact' },
       ],
     },
     {
       title: 'Sensei & The Four Seasons',
       links: [
-        { text: 'About Koēle', href: '#' },
-        { text: 'About Manele', href: '#' },
-        { text: 'Contact', href: '#' },
-        { text: 'Reservations', href: '#' },
+        { text: 'About Koēle', href: 'https://www.fourseasons.com/sensei/' },
+        { text: 'Contact Koēle', href: 'https://www.fourseasons.com/sensei/contact-us/' },
+        { text: 'About Manele', href: 'https://www.fourseasons.com/lanai//' },
+        { text: 'Contact Manele', href: 'https://www.fourseasons.com/lanai/contact-us/' },
       ],
     },
   ],
@@ -127,10 +108,6 @@ export const footerData = {
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
-  socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-  ],
+  socialLinks: [],
   footNote: ``,
 };

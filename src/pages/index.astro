@@ -13,60 +13,63 @@ export const MAIN_CATEGORY_CLASS =
 <Layout metadata={metadata}>
   <section class="container mx-auto">
     <p class="italic ml-4 mb-4 avenir-medium">from the mountains to the sea...</p>
-    <div class="max-w-4xl mx-auto px-4">
-      <a href="/mountains/landing">
-        <CldImage
-          class="rounded-lg"
-          src="foo/erugjwlm051zt3fhwwr3.jpg"
-          alt="The Mountains"
-          width={1000}
-          height={1000}
-          sizes="(max-width: 768px) 100vw, 1000px"
-          overlays={[
-            {
-              text: {
-                color: 'white',
-                fontFamily: 'xqap0ft39h1j5oxutcmu.otf',
-                fontSize: 60,
-                fontWeight: 'bold',
-                text: 'THE MOUNTAINS',
-              },
-              position: {
-                gravity: 'center',
-                y: 500,
-              },
-            },
-          ]}
-        />
-      </a>
-    </div>
-  </section>
-  <section class="container mx-auto my-8">
-    <div class="max-w-4xl mx-auto px-4">
-      <a href="/sea/landing">
-        <CldImage
-          class="rounded-lg"
-          src="lanai/mountains/fischer-main"
-          alt="The Sea"
-          width={1000}
-          height={1000}
-          overlays={[
-            {
-              text: {
-                color: 'white',
-                fontFamily: 'xqap0ft39h1j5oxutcmu.otf',
-                fontSize: 60,
-                fontWeight: 'bold',
-                text: 'THE SEA',
-              },
-              position: {
-                gravity: 'center',
-                y: -530,
-              },
-            },
-          ]}
-        />
-      </a>
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="w-full md:w-1/2">
+          <a href="/mountains/landing">
+            <CldImage
+              class="rounded-lg w-full"
+              src="foo/erugjwlm051zt3fhwwr3.jpg"
+              alt="The Mountains"
+              width={1000}
+              height={1000}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              overlays={[
+                {
+                  text: {
+                    color: 'white',
+                    fontFamily: 'xqap0ft39h1j5oxutcmu.otf',
+                    fontSize: 60,
+                    fontWeight: 'bold',
+                    text: 'THE MOUNTAINS',
+                  },
+                  position: {
+                    gravity: 'center',
+                    y: 500,
+                  },
+                },
+              ]}
+            />
+          </a>
+        </div>
+        <div class="w-full md:w-1/2">
+          <a href="/sea/landing">
+            <CldImage
+              class="rounded-lg w-full"
+              src="lanai/mountains/fischer-main"
+              alt="The Sea"
+              width={1000}
+              height={1000}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              overlays={[
+                {
+                  text: {
+                    color: 'white',
+                    fontFamily: 'xqap0ft39h1j5oxutcmu.otf',
+                    fontSize: 60,
+                    fontWeight: 'bold',
+                    text: 'THE SEA',
+                  },
+                  position: {
+                    gravity: 'center',
+                    y: -530,
+                  },
+                },
+              ]}
+            />
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

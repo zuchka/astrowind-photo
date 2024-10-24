@@ -1,35 +1,36 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { Cloudinary } from 'astro-cloudinary-image'
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import LandingHeader from '~/components/widgets/LandingHeader.astro';
 
 const metadata = {
-  title: 'Startup Landing Page',
+  title: 'Sea Landing Page',
 };
 ---
 
 <Layout metadata={metadata}>
-  <section class="container mx-auto my-8">
-    <Cloudinary 
-      width="800"
-      height="400"
-      resize="fill"
-      gravity="face"
-      cornerRadius={5}
-      alt="A sample image"
-      src="adam-eve-main" 
-      errorImage="NotFound.svg"
-    />
-  </section>
-  <section class="container mx-auto my-8">
-    <Cloudinary 
-      width="800"
-      height="400"
-      resize="fill"
-      gravity="face"
-      cornerRadius={5}
-      alt="A sample image"
-      src="adam-eve-detail-1" 
-      errorImage="NotFound.svg"
-    />
-  </section>
+  <LandingHeader
+    region="THE SEA"
+    caption=`There are 6 main artworks near the sea around Lāna'i. You can find all of them on the grounds of Sensei Lāna'i, A Four Seasons Resort. 
+      <br /><br />
+      Click any image below for artwork, artist, and location details.`
+  />
+  <a href="/mountains/castel-cocoface" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="castel-cocoface-detail-1" alt="Cocoface" width="896" height="896" />
+  </a>
+  <a href="/mountains/castel-cocoface" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="castel-cocoface-detail-1" alt="Cocoface" width="896" height="896" />
+  </a>
+  <a href="/mountains/castel-cocoface" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="castel-cocoface-detail-1" alt="Cocoface" width="896" height="896" />
+  </a>
+  <a href="/mountains/castel-cocoface" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="castel-cocoface-detail-1" alt="Cocoface" width="896" height="896" />
+  </a>
+  <a href="/mountains/castel-cocoface" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="castel-cocoface-detail-1" alt="Cocoface" width="896" height="896" />
+  </a>
+  <a href="/mountains/castel-cocoface" class="block pt-4">
+    <ArtworkImage class="rounded-lg" src="castel-cocoface-detail-1" alt="Cocoface" width="896" height="896" />
+  </a>
 </Layout>

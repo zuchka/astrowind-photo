@@ -319,3 +319,9 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+export interface LandingHeader extends Omit<Headline, 'classes'>, Widget {
+  region?: string;
+  description?: string;
+  callToAction?: CallToAction;
+}
