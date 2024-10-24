@@ -5,6 +5,7 @@ import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
 import { JAUME_PLENSA } from '~/data/artistBios';
+import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
 
 const metadata = {
   title: 'Plensa Talaia',
@@ -12,6 +13,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <ScrollToTop />
   <ArtworkImage
     class="rounded-lg"
     src="2016.103_Plensa_2021_0317_PS_v2_psmeiz"

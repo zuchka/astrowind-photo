@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -13,65 +13,16 @@ export const headerData = {
     {
       text: 'Maps',
       href: getPermalink('/landing/lead-generation'),
-      // links: [
-      //   {
-      //     text: 'Fernando Botero',
-      //     href: getPermalink('/landing/lead-generation'),
-      //   },
-      //   {
-      //     text: 'Robert Indiana',
-      //     href: getPermalink('/landing/sales'),
-      //   },
-      //   {
-      //     text: 'Ju Ming',
-      //     href: getPermalink('/landing/click-through'),
-      //   },
-      //   {
-      //     text: 'Emily Young',
-      //     href: getPermalink('/landing/product'),
-      //   },
-      //   {
-      //     text: 'Jaume Plensa',
-      //     href: getPermalink('/landing/pre-launch'),
-      //   },
-      //   // {
-      //   //   text: 'Subscription',
-      //   //   href: getPermalink('/landing/subscription'),
-      //   // },
-      // ],
     },
     {
       text: 'About',
       href: getPermalink('/landing/lead-generation'),
-      // links: [
-      //   {
-      //     text: 'Blog List',
-      //     href: getBlogPermalink(),
-      //   },
-      //   {
-      //     text: 'Article',
-      //     href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-      //   },
-      //   {
-      //     text: 'Article (with MDX)',
-      //     href: getPermalink('markdown-elements-demo-post', 'post'),
-      //   },
-      //   {
-      //     text: 'Category Page',
-      //     href: getPermalink('tutorials', 'category'),
-      //   },
-      //   {
-      //     text: 'Tag Page',
-      //     href: getPermalink('astro', 'tag'),
-      //   },
-      // ],
     },
     {
       text: 'Book a Tour',
       href: '#',
     },
   ],
-  // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {

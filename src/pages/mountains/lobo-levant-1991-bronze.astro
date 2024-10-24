@@ -5,6 +5,7 @@ import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
 import { BALTASAR_LOBO } from '~/data/artistBios';
+import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
 
 const metadata = {
   title: 'Lobo L\'Île du Levant',
@@ -12,6 +13,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <ScrollToTop />
   <ArtworkImage
     class="rounded-lg"
     src="lobo-levant-bronze-main"

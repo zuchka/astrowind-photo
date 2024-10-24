@@ -4,6 +4,7 @@ import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
 
 const metadata = {
   title: 'Quinn Burning Desire',
@@ -11,6 +12,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <ScrollToTop />
   <ArtworkImage
     class="rounded-lg"
     src="burning-desire-main"

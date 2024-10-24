@@ -4,13 +4,14 @@ import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
-
+import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
 const metadata = {
   title: 'Hirst Cherry Blossoms',
 };
 ---
 
 <Layout metadata={metadata}>
+  <ScrollToTop />
   <ArtworkImage
     class="rounded-lg"
     src="lanai/mountains/hirst-blossoms-main"

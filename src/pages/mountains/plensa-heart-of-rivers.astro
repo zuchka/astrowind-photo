@@ -5,6 +5,7 @@ import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
 import { JAUME_PLENSA } from '~/data/artistBios';
+import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
 
 const metadata = {
   title: 'Plensa Heart of Rivers',
@@ -12,6 +13,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <ScrollToTop />
   <ArtworkImage
     class="rounded-lg"
     src="plensa-heart-rivers-main"
