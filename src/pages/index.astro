@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { CldImage } from 'astro-cloudinary';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import '~/styles/fonts.css';
 
 const metadata = {
@@ -16,56 +16,12 @@ const metadata = {
       <div class="flex flex-col md:flex-row gap-8">
         <div class="w-full md:w-1/2">
           <a href="/mountains/landing">
-            <CldImage
-              class="rounded-lg w-full"
-              src="foo/erugjwlm051zt3fhwwr3.jpg"
-              alt="The Mountains"
-              width={1000}
-              height={1000}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              overlays={[
-                {
-                  text: {
-                    color: 'white',
-                    fontFamily: 'xqap0ft39h1j5oxutcmu.otf',
-                    fontSize: 60,
-                    fontWeight: 'bold',
-                    text: 'THE MOUNTAINS',
-                  },
-                  position: {
-                    gravity: 'center',
-                    y: 500,
-                  },
-                },
-              ]}
-            />
+            <ArtworkImage class="rounded-lg" src="lanai/axyj8vngkgtjxvchxnc8" alt="Sensei Lanai" width="896" height="896" />
           </a>
         </div>
         <div class="w-full md:w-1/2">
           <a href="/sea/landing">
-            <CldImage
-              class="rounded-lg w-full"
-              src="lanai/mountains/fischer-main"
-              alt="The Sea"
-              width={1000}
-              height={1000}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              overlays={[
-                {
-                  text: {
-                    color: 'white',
-                    fontFamily: 'xqap0ft39h1j5oxutcmu.otf',
-                    fontSize: 60,
-                    fontWeight: 'bold',
-                    text: 'THE SEA',
-                  },
-                  position: {
-                    gravity: 'center',
-                    y: -530,
-                  },
-                },
-              ]}
-            />
+            <ArtworkImage class="rounded-lg" src="lanai/zitppdr7wbra3oxgtuzb" alt="Fischer The Breach" width="896" height="896" />
           </a>
         </div>
       </div>
