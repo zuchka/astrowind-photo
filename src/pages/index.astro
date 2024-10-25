@@ -1,14 +1,11 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { CldImage } from 'astro-cloudinary';
-import LandingHeader from '~/components/widgets/LandingHeader.astro';
 import '~/styles/fonts.css';
 
 const metadata = {
   title: "The Lāna'i Art Collection",
 };
-export const MAIN_CATEGORY_CLASS =
-  'relative mb-5 flex h-[650px] flex-col items-center justify-center gap-4 overflow-hidden rounded-lg bg-white/10 px-0 text-center text-white shadow-highlight';
 ---
 
 <Layout metadata={metadata}>
@@ -72,20 +69,58 @@ export const MAIN_CATEGORY_CLASS =
           </a>
         </div>
       </div>
-      <LandingHeader
-          id="about"
-          region="ABOUT THE COLLECTION"
-          caption=`There are 6 main artworks near the sea around Lāna'i. You can find all of them on the grounds of Sensei Lāna'i, A Four Seasons Resort. 
-      <br /><br />
-            Click any image below for artwork, artist, and location details.`
-        />
-        <LandingHeader
-          id="book-a-tour"
-          region="BOOK A TOUR"
-          caption=`There are 6 main artworks near the sea around Lāna'i. You can find all of them on the grounds of Sensei Lāna'i, A Four Seasons Resort. 
-      <br /><br />
-            Click any image below for artwork, artist, and location details.`
-        />
+      <div
+        id="about"
+        style="scroll-margin-top: 90px;"
+      class="max-w-4xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow my-8"
+      >
+        <div class="text-left pt-3 px-4">
+          <h3 class="avenir-heavy text-xl font-semibold uppercase leading-6 tracking-wider mb-1">
+            ABOUT THE COLLECTION
+          </h3>
+        </div>
+        <div class="px-4 flex flex-col">
+          <div class="lg:flex lg:justify-between mb-4">
+            <div class="mt-4 lg:mt-0 lg:w-3/4 lg:pl-0">
+              <p
+                class="avenir-book text-lg leading-7 text-gray-600 dark:text-slate-400 text-left"
+                set:html={`Reprehenderit qui consectetur culpa reprehenderit sint est mollit qui mollit cupidatat. Exercitation duis et eu eu duis laboris consequat proident duis labore culpa. 
+                <br><br>
+                Laborum duis dolore ea mollit Lorem occaecat elit occaecat cupidatat. Est eiusmod cillum fugiat. Id deserunt exercitation deserunt. Officia et laborum commodo laborum. Deserunt veniam qui Lorem adipisicing consequat incididunt commodo sit velit esse mollit elit sint. Tempor et et reprehenderit nulla.`}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="book-a-tour"
+        style="scroll-margin-top: 90px;"
+      class="max-w-4xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow my-8"
+      >
+        <div class="text-left pt-3 px-4">
+          <h3 class="avenir-heavy text-xl font-semibold uppercase leading-6 tracking-wider mb-1">
+            BOOK A TOUR
+          </h3>
+        </div>
+        <div class="px-4 flex flex-col">
+          <div class="lg:flex lg:justify-between mb-4">
+            <div class="mt-4 lg:mt-0 lg:w-3/4 lg:pl-0">
+              <p
+                class="avenir-book text-lg leading-7 text-gray-600 dark:text-slate-400 text-left"
+                set:html={`Guided tours of the Upper Lāna'i Art Collection (Mountains) are available by appointment. 
+                <br><br>
+                The tour includes the 25 major artworks on the grounds of Sensei Lāna'i, A Four Seasons Resort.
+                <br><br>
+                Please contact hospitality at either resort for more information about art tours or scheduling your own adventure.
+                <br><br>
+                Sensei Lanai Experiences Desk: 555-555-5555
+                <br><br>
+                Four Seasons Resort Lāna'i Concierge: 555-555-5555`}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
