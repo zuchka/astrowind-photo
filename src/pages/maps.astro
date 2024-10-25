@@ -1,8 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
-import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
+import MapDetails from '~/components/widgets/MapDetails.astro';
 
 const metadata = {
   title: 'Maps',
@@ -18,7 +18,7 @@ const metadata = {
     alt="Fischer The Breach sculpture by Urs Fischer"
     caption="Image: Phillip Sowers"
   />
-  <ArtworkDetails
+  <MapDetails
     artworkDetails={{
       title: "THE ISLAND OF LĀNA'I",
       artist: 'HAWAIIAN ARCHIPELAGO',
@@ -31,19 +31,19 @@ const metadata = {
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
         target: '_self',
-        text: 'Learn More',
-        href: '#artist-bio',
+        text: 'Learn More about the island',
+        href: 'https://pulamalanai.com/#what-we-do',
       },
     }}
   />
   <ArtworkImage
     width="896"
     height="896"
-    src="lanai/g9iizgyxkjjdczf9vyrz"
+    src="lanai/aeqmd72kb530okg3y7iu"
     alt="Detail of Fischer The Breach sculpture"
     caption="Image: Phillip Sowers"
   />
-  <ArtworkDetails
+  <MapDetails
     artworkDetails={{
       title: "SENSEI LĀNA'I",
       artist: 'THE MOUNTAINS',
@@ -56,8 +56,8 @@ const metadata = {
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
         target: '_self',
-        text: 'Learn More',
-        href: '#artist-bio',
+        text: 'View works in this location',
+        href: '/mountains/landing',
       },
     }}
   />
@@ -68,7 +68,7 @@ const metadata = {
     alt="Detail of Fischer The Breach sculpture"
     caption="Image: Phillip Sowers"
   />
-  <ArtworkDetails
+  <MapDetails
     artworkDetails={{
       title: "THE FOUR SEASONS RESORT LĀNA'I",
       artist: 'THE SEA',
@@ -81,8 +81,8 @@ const metadata = {
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
         target: '_self',
-        text: 'Learn More',
-        href: '#artist-bio',
+        text: 'View works in this location',
+        href: '/sea/landing',
       },
     }}
   />
