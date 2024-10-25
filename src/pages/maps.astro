@@ -2,13 +2,10 @@
 import Layout from '~/layouts/PageLayout.astro';
 import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
-import ArtistBio from '~/components/widgets/ArtistBio.astro';
-import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
-import { URS_FISCHER } from '~/data/artistBios';
 import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
 
 const metadata = {
-  title: 'Fischer The Breach',
+  title: 'Maps',
 };
 ---
 
@@ -17,30 +14,20 @@ const metadata = {
   <ArtworkImage
     width="896"
     height="896"
-    src="lanai/mountains/fischer-main"
+    src="lanai/m0y3iaww7itpb6dhvm1e"
     alt="Fischer The Breach sculpture by Urs Fischer"
     caption="Image: Phillip Sowers"
   />
   <ArtworkDetails
     artworkDetails={{
-      title: 'THE BREACH',
-      artist: URS_FISCHER.artist,
-      date: '2024',
+      title: "THE ISLAND OF LĀNA'I",
+      artist: 'HAWAIIAN ARCHIPELAGO',
+      date: 'CENTRAL PACIFIC OCEAN',
       description: `
-        From the lobby of Sensei Lāna'i we see Fernando Botero's Adam and Eve. 
-        Framed by the slender Cook Pines that give way to the resort, 
-        each figure grasps an apple in one bulbous hand. 
-        Together, they welcome guests to this special place: 
-        Kō'ele, a royal land perched in clouds.
-        <br><br>
-        Typical of Fernando Botero's work, Adam and Eve are robust and solid, 
-        but in a witty, zestful sort of way. 
-        With soft, archaic smiles and contented postures, 
-        they remind us that Kō'ele, like paradise, 
-        is a place overflowing with life.
+        Incididunt ut elit dolore cupidatat aute est enim. Nostrud nisi sunt voluptate dolore ea aliquip nulla Lorem consectetur. Anim officia aute adipisicing cillum quis esse incididunt fugiat tempor ex occaecat velit deserunt est. Aute sint minim in velit sunt. Proident consequat ad aute cillum sit excepteur sit culpa sint tempor id dolore occaecat eiusmod adipisicing. Minim nulla ex voluptate laboris nostrud id enim tempor occaecat quis sunt tempor.
       `,
-      material: 'bronze',
-      copyright: URS_FISCHER.copyright,
+      material: '',
+      copyright: '',
       photoCredit: 'Photo credit: © Phillip Sowers',
       callToAction: {
         target: '_self',
@@ -52,56 +39,51 @@ const metadata = {
   <ArtworkImage
     width="896"
     height="896"
-    src="lanai/sea/breach-detail-1"
+    src="lanai/g9iizgyxkjjdczf9vyrz"
     alt="Detail of Fischer The Breach sculpture"
     caption="Image: Phillip Sowers"
   />
-  <ArtworkImage
-  width="896"
-  height="896"
-  src="lanai/sea/breach-sunset"
-  alt="Detail of Fischer The Breach sculpture"
-  caption="Image: Phillip Sowers"
-/>
-<ArtworkImage
-width="896"
-height="896"
-src="lanai/sea/breach-with-stars"
-alt="Detail of Fischer The Breach sculpture"
-caption="Image: Phillip Sowers"
-/>
-  <ArtistBio
-    artist={URS_FISCHER.artist}
-    lifespan={URS_FISCHER.lifespan}
-    nationality={URS_FISCHER.nationality}
-    description={URS_FISCHER.description}
+  <ArtworkDetails
+    artworkDetails={{
+      title: "SENSEI LĀNA'I",
+      artist: 'THE MOUNTAINS',
+      date: `KAIHOLENA GULCH`,
+      description: `
+        Incididunt ut elit dolore cupidatat aute est enim. Nostrud nisi sunt voluptate dolore ea aliquip nulla Lorem consectetur. Anim officia aute adipisicing cillum quis esse incididunt fugiat tempor ex occaecat velit deserunt est. Aute sint minim in velit sunt. Proident consequat ad aute cillum sit excepteur sit culpa sint tempor id dolore occaecat eiusmod adipisicing. Minim nulla ex voluptate laboris nostrud id enim tempor occaecat quis sunt tempor.
+      `,
+      material: '',
+      copyright: '',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
   />
   <ArtworkImage
-width="896"
-height="896"
-src="lanai/sea/breach-golf-course"
-alt="Detail of Fischer The Breach sculpture"
-caption="Image: Phillip Sowers"
-/>
-<ArtworkImage
-width="896"
-height="896"
-src="lanai/sea/breach-detail-2"
-alt="Detail of Fischer The Breach sculpture"
-caption="Image: Phillip Sowers"
-/>
-  <ArtworkLocation
-    hotelLocation="MOUNTAINS: Front Garden, Sensei Lāna'i"
-    gpsCoordinates=`20°50'07.8"N 156°55'03.6"W`
-    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
-    description=`
-      Adam and Eve are nestled in the front garden of Sensei Lāna'i.
-      Leave the lobby and cross directly across the car path to find them.
-    `
-    callToAction={{
-      target: '_blank',
-      text: 'Open in Google Maps',
-      href: 'https://maps.app.goo.gl/fsCdhuC8LGjQtDFC6',
+    width="896"
+    height="896"
+    src="lanai/u9rso0oxcbfnk7pn3kwi"
+    alt="Detail of Fischer The Breach sculpture"
+    caption="Image: Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: "THE FOUR SEASONS RESORT LĀNA'I",
+      artist: 'THE SEA',
+      date: 'HULOPO\'E BAY',
+      description: `
+        Incididunt ut elit dolore cupidatat aute est enim. Nostrud nisi sunt voluptate dolore ea aliquip nulla Lorem consectetur. Anim officia aute adipisicing cillum quis esse incididunt fugiat tempor ex occaecat velit deserunt est. Aute sint minim in velit sunt. Proident consequat ad aute cillum sit excepteur sit culpa sint tempor id dolore occaecat eiusmod adipisicing. Minim nulla ex voluptate laboris nostrud id enim tempor occaecat quis sunt tempor.
+      `,
+      material: '',
+      copyright: '',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
     }}
   />
 </Layout>
