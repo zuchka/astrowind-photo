@@ -5,19 +5,21 @@ interface Props {
   region?: string;
   caption?: string;
   class?: string;
+  id?: string;
 }
 
 const { 
   region,
   caption,
   class: className = '',
+  id,
 } = Astro.props;
 
 const containerClasses = `mx-auto my-4 max-w-5xl px-4 sm:px-6 lg:px-8 ${className}`;
 
 ---
 
-<div class={containerClasses}>
+<div id={id} class={containerClasses}>
   <div
       class="max-w-4xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow"
     >

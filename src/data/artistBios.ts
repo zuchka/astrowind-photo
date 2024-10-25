@@ -52,3 +52,13 @@ export const JAUME_PLENSA = {
     `,
   copyright: '© Jaume Plensa. Courtesy of the artist and Cambridge Art Gallery',
 };
+
+export const URS_FISCHER = {
+  artist: 'URS FISCHER',
+  lifespan: '1968 - ',
+  nationality: 'Swiss',
+  description: `
+      Urs Fischer is a Swiss artist known for his sculptures and installations.
+    `,
+  copyright: '© Urs Fischer',
+};

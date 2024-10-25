@@ -16,11 +16,11 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: getPermalink('/landing/lead-generation'),
+      href: getPermalink('/#about'),
     },
     {
       text: 'Book a Tour',
-      href: '#',
+      href: getPermalink('/#book-a-tour'),
     },
   ],
 };
@@ -33,8 +33,8 @@ export const footerData = {
         { text: 'The Mountains', href: getPermalink('/mountains/landing') },
         { text: 'The Sea', href: getPermalink('/sea/landing') },
         { text: 'Maps', href: '#' },
-        { text: 'About', href: '#' },
-        { text: 'Book a Tour', href: '#' },
+        { text: 'About', href: getPermalink('/#about') },
+        { text: 'Book a Tour', href: getPermalink('/#book-a-tour') },
       ],
     },
     {

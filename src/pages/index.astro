@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import { CldImage } from 'astro-cloudinary';
+import LandingHeader from '~/components/widgets/LandingHeader.astro';
 import '~/styles/fonts.css';
 
 const metadata = {
@@ -12,7 +13,8 @@ export const MAIN_CATEGORY_CLASS =
 
 <Layout metadata={metadata}>
   <section class="container mx-auto">
-    <p class="italic ml-4 mb-4 avenir-medium">from the mountains to the sea...</p>
+    <p class="italic ml-4 avenir-medium">mauka to makai...</p>
+    <p class="italic ml-4 mb-4 avenir-book">from the mountains to the sea...</p>
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col md:flex-row gap-8">
         <div class="w-full md:w-1/2">
@@ -70,6 +72,20 @@ export const MAIN_CATEGORY_CLASS =
           </a>
         </div>
       </div>
+      <LandingHeader
+          id="about"
+          region="ABOUT THE COLLECTION"
+          caption=`There are 6 main artworks near the sea around Lāna'i. You can find all of them on the grounds of Sensei Lāna'i, A Four Seasons Resort. 
+      <br /><br />
+            Click any image below for artwork, artist, and location details.`
+        />
+        <LandingHeader
+          id="book-a-tour"
+          region="BOOK A TOUR"
+          caption=`There are 6 main artworks near the sea around Lāna'i. You can find all of them on the grounds of Sensei Lāna'i, A Four Seasons Resort. 
+      <br /><br />
+            Click any image below for artwork, artist, and location details.`
+        />
     </div>
   </section>
 </Layout>
