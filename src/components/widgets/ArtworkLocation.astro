@@ -39,7 +39,11 @@ const {
               </div>
             </div>
             <div class="flex justify-between items-center mt-auto">
-              <Button variant="secondary" text="Return to Gallery" href="/mountains/landing" />
+              <Button 
+                variant="secondary" 
+                text="←" 
+                href={Astro.url.pathname.includes('/mountains') ? '/mountains/landing' : '/sea/landing'} 
+              />
               {callToAction && (
                 typeof callToAction === 'string' ? (
                   <div set:html={callToAction} />
