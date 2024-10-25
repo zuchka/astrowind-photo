@@ -12,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Maps',
-      href: getPermalink('/landing/lead-generation'),
+      href: getPermalink('/maps'),
     },
     {
       text: 'About',
@@ -32,7 +32,7 @@ export const footerData = {
       links: [
         { text: 'The Mountains', href: getPermalink('/mountains/landing') },
         { text: 'The Sea', href: getPermalink('/sea/landing') },
-        { text: 'Maps', href: '#' },
+        { text: 'Maps', href: getPermalink('/maps') },
         { text: 'About', href: getPermalink('/#about') },
         { text: 'Book a Tour', href: getPermalink('/#book-a-tour') },
       ],
