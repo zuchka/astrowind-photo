@@ -1,6 +1,6 @@
 site:
   name: Art on Lāna'i
-  site: 'https://artonlanai.com'
+  site: 'https://demo-art-collection.netlify.app/'
   base: '/'
   trailingSlash: false
 
