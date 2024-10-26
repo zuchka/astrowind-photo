@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import '~/styles/fonts.css';
+import MapDetails from '~/components/widgets/MapDetails.astro';
 
 const metadata = {
   title: "The Lāna'i Art Collection",
@@ -10,73 +11,69 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="container mx-auto">
-    <p class="italic ml-4 avenir-medium">mauka to makai...</p>
-    <p class="italic ml-4 mb-4 avenir-book">from the mountains to the sea...</p>
-    <div class="mx-auto my-4 max-w-4xl sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row gap-8">
+    <div class="mx-auto my-4 max-w-5xl sm:px-6 lg:px-8">
+      <p class="italic ml-4 sm:ml-8 avenir-medium">mauka to makai...</p>
+      <p class="italic ml-4 sm:ml-8 mb-4 avenir-book">from the mountains to the sea...</p>
+      <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-1/2">
           <a href="/mountains/landing">
-            <ArtworkImage class="rounded-lg" src="lanai/axyj8vngkgtjxvchxnc8" alt="Sensei Lanai" width="896" height="896" />
+            <ArtworkImage
+              class="rounded-lg"
+              src="lanai/axyj8vngkgtjxvchxnc8"
+              alt="Sensei Lanai"
+              width="896"
+              height="896"
+            />
           </a>
         </div>
         <div class="w-full md:w-1/2">
           <a href="/sea/landing">
-            <ArtworkImage class="rounded-lg" src="lanai/zitppdr7wbra3oxgtuzb" alt="Fischer The Breach" width="896" height="896" />
+            <ArtworkImage
+              class="rounded-lg"
+              src="lanai/zitppdr7wbra3oxgtuzb"
+              alt="Fischer The Breach"
+              width="896"
+              height="896"
+            />
           </a>
         </div>
       </div>
-      <div
-        id="about"
-        style="scroll-margin-top: 90px;"
-      class="max-w-4xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow my-8"
-      >
-        <div class="text-left pt-3 px-4">
-          <h3 class="avenir-heavy text-xl font-semibold uppercase leading-6 tracking-wider mb-1">
-            ABOUT THE COLLECTION
-          </h3>
-        </div>
-        <div class="px-4 flex flex-col">
-          <div class="lg:flex lg:justify-between mb-4">
-            <div class="mt-4 lg:mt-0 lg:w-3/4 lg:pl-0">
-              <p
-                class="avenir-book text-lg leading-7 text-gray-600 dark:text-slate-400 text-left"
-                set:html={`Reprehenderit qui consectetur culpa reprehenderit sint est mollit qui mollit cupidatat. Exercitation duis et eu eu duis laboris consequat proident duis labore culpa. 
-                <br><br>
-                Laborum duis dolore ea mollit Lorem occaecat elit occaecat cupidatat. Est eiusmod cillum fugiat. Id deserunt exercitation deserunt. Officia et laborum commodo laborum. Deserunt veniam qui Lorem adipisicing consequat incididunt commodo sit velit esse mollit elit sint. Tempor et et reprehenderit nulla.`}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        id="book-a-tour"
-        style="scroll-margin-top: 90px;"
-      class="max-w-4xl mx-auto rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow my-8"
-      >
-        <div class="text-left pt-3 px-4">
-          <h3 class="avenir-heavy text-xl font-semibold uppercase leading-6 tracking-wider mb-1">
-            BOOK A TOUR
-          </h3>
-        </div>
-        <div class="px-4 flex flex-col">
-          <div class="lg:flex lg:justify-between mb-4">
-            <div class="mt-4 lg:mt-0 lg:w-3/4 lg:pl-0">
-              <p
-                class="avenir-book text-lg leading-7 text-gray-600 dark:text-slate-400 text-left"
-                set:html={`Guided group tours of the Upper Lāna'i Art Collection (Mountains) are available. Reservations are required. 
-                <br><br>
-                The tour includes the 25 major artworks on the grounds of Sensei Lāna'i, A Four Seasons Resort.
-                <br><br>
-                Please contact hospitality at either resort to reserve a spot on the group tour. They can also help you schedule your own art adventure.
-                <br><br>
-                Sensei Lanai Experiences Desk: 555-555-5555
-                <br><br>
-                Four Seasons Resort Lāna'i Concierge: 555-555-5555`}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <MapDetails
+          id="about"
+          artworkDetails={{
+            title: '',
+            artist: 'ABOUT THE COLLECTION',
+            date: '',
+            description:
+              'Reprehenderit qui consectetur culpa reprehenderit sint est mollit qui mollit cupidatat. Exercitation duis et eu eu duis laboris consequat proident duis labore culpa. <br><br>Laborum duis dolore ea mollit Lorem occaecat elit occaecat cupidatat. Est eiusmod cillum fugiat. Id deserunt exercitation deserunt. Officia et laborum commodo laborum. Deserunt veniam qui Lorem adipisicing consequat incididunt commodo sit velit esse mollit elit sint. Tempor et et reprehenderit nulla.',
+            material: '',
+            copyright: '',
+            photoCredit: '',
+            callToAction: {
+              target: '_self',
+              text: 'Learn More about the island',
+              href: 'https://pulamalanai.com/#what-we-do',
+            },
+          }}
+        />
+        <MapDetails
+          id="book-a-tour"
+          artworkDetails={{
+            title: '',
+            artist: 'BOOK A TOUR',
+            date: '',
+            description:
+              "Guided group tours of the Upper Lāna'i Art Collection (Mountains) are available. Reservations are required. <br><br>The tour includes the 25 major artworks on the grounds of Sensei Lāna'i, A Four Seasons Resort. <br><br>Please contact hospitality at either resort to reserve a spot on the group tour. They can also help you schedule your own art adventure. <br><br>Sensei Lanai Experiences Desk: 555-555-5555 <br><br>Four Seasons Resort Lāna'i Concierge: 555-555-5555",
+            material: '',
+            copyright: '',
+            photoCredit: '',
+            callToAction: {
+              target: '_self',
+              text: 'Visit the Four Seasons Resort Lāna\'i',
+              href: 'https://fourseasons.com/lanai',
+            },
+          }}
+        />
     </div>
   </section>
 </Layout>
