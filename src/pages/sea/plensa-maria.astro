@@ -1,0 +1,65 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+import { JAUME_PLENSA } from '~/data/artistBios';
+
+const metadata = {
+  title: 'Plensa Maria',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="plensa-maria"
+    alt="Plensa Maria"
+    width="896"
+    height="896"
+    caption="Image: © Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'MARIA',
+      artist: 'JAUME PLENSA',
+      date: '2019',
+      description: `
+        Barcelona native, Jaume Plensa, expresses the beauty and complexity of the human figure, often in the form of heads and faces. 
+        Like the Hawaiian Islands, this portrait of Maria is made of Basalt, a dense, black volcanic rock. 
+        <br><br>
+        Her face, captured in a three-quarter view, has been foreshortened to create an optical illusion which changes as you approach her. 
+      `,
+      material: 'basalt and lead',
+      copyright: JAUME_PLENSA.copyright,
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist={JAUME_PLENSA.artist}
+    lifespan={JAUME_PLENSA.lifespan}
+    nationality={JAUME_PLENSA.nationality}
+    description={JAUME_PLENSA.description}
+  />
+  <ArtworkLocation
+    hotelLocation="MOUNTAINS: Rear Garden, Sensei Lāna'i"
+    gpsCoordinates=`20°50'13.2"N 156°54'55.1"W`
+    terrain="Kaiholena Gulch, Lāna'i, Hawai'i"
+    description=`
+      Talaia is nestled in the rear garden of Sensei Lāna'i.
+      You must hike up to it from behind the treatment rooms.
+      Follow the path past the yoga studio and follow the signs up the trail.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/2YJyQtSJgXk5no399',
+    }}
+  />
+</Layout>
