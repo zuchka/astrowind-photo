@@ -1,0 +1,65 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Manookian Poi Pounders',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage
+    class="rounded-lg"
+    src="lanai/sea/manookian-1"
+    alt="Manookian Poi Pounders"
+    width="896"
+    height="896"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'POI POUNDERS',
+      artist: 'ARMAN MANOOKIAN',
+      date: '1930',
+      description: `
+        TK
+      `,
+      material: 'Oil on canvas laid to board',
+      copyright: '© Manookian',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="ARMAN MANOOKIAN"
+    lifespan="1904 - 1931"
+    nationality="Turkish"
+    description=`
+      TK
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="SEA: Main Lobby, Four Seasons Resort Lāna'i"
+    gpsCoordinates=`20°50'13.2"N 156°54'55.1"W`
+    terrain="TK"
+    description=`
+      TK
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/2YJyQtSJgXk5no399',
+    }}
+  />
+</Layout>
