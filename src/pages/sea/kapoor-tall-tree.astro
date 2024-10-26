@@ -1,0 +1,65 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+import { URS_FISCHER } from '~/data/artistBios';
+import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
+
+const metadata = {
+  title: 'Kapoor Tall Tree',
+};
+---
+
+<Layout metadata={metadata}>
+  <ScrollToTop />
+  <ArtworkImage
+    width="896"
+    height="896"
+    src="kapoor-tall-tree"
+    alt="Kapoor Tall Tree sculpture by Anish Kapoor"
+    caption="Image: Phillip Sowers"
+  />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'TALL TREE AND THE EYE V',
+      artist: 'ANISH KAPOOR',
+      date: '2016',
+      description: `
+        This sculpture, by British-Indian artist Sir Anish Kapoor, is comprised of 97 stainless-steel spheres. The last in a series of five, the 
+        Lāna’i Tall Tree is the tallest of its predecessors and has the most complex and effortless composition. 
+        <br><br>
+        Kapoor’s work explores mathematical, material, and structural principles in a wide range of materials- from mirror finish stainless-steel, 
+        to the blackest of black powder pigments. 
+      `,
+      material: 'Stainless steel',
+      copyright: 'TK',
+      photoCredit: 'Photo credit: © Phillip Sowers',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist={URS_FISCHER.artist}
+    lifespan={URS_FISCHER.lifespan}
+    nationality={URS_FISCHER.nationality}
+    description={URS_FISCHER.description}
+  />
+  <ArtworkLocation
+    hotelLocation="SEA: West of Hulopoe Bay"
+    gpsCoordinates=`TK`
+    terrain="TK"
+    description=`
+      TK
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/fsCdhuC8LGjQtDFC6',
+    }}
+  />
+</Layout>
