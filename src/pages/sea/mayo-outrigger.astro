@@ -1,0 +1,61 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
+import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
+import ArtistBio from '~/components/widgets/ArtistBio.astro';
+import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
+
+const metadata = {
+  title: 'Mayo Outrigger',
+};
+---
+
+<Layout metadata={metadata}>
+  <ArtworkImage class="rounded-lg" src="lanai/sea/z8eplssvkuryyen4qqtm" alt="Mayo Outrigger" width="896" height="896" />
+  <ArtworkDetails
+    artworkDetails={{
+      title: 'OUTRIGGER',
+      artist: 'WILLIAMSON MAYO',
+      date: 'c. 1950',
+      description: `
+        TK
+      `,
+      material: 'Oil on masonite panel',
+      copyright: '',
+      photoCredit: '',
+      callToAction: {
+        target: '_self',
+        text: 'Learn More',
+        href: '#artist-bio',
+      },
+    }}
+  />
+  <ArtistBio
+    artist="WILLIAMSON MAYO"
+    lifespan="1913 - 1993"
+    nationality="American"
+    description=`
+      Mayo was a San Francisco-based commercial and fine artist who studied with David Park at the California School of Fine Arts. He was known for his movie and burlesque posters and ran a silkscreening firm that made posters and wallpaper. He showed at Maxwell Galleries in San Francisco and Hawai'i where he moved in the 1950's. 
+      <br><br>
+      In the 1950's, the owners of Hotel Hana Maui commissioned Mayo to create this painting for their lobby to complement their collection of rare paintings by Arman Manookian. Mayo was also commissioned to by the US Goverment to paint images of Micronesia in the 1970's.  
+    `
+    callToAction={{
+      target: '_self',
+      text: 'View on Map',
+      href: '#location',
+    }}
+  />
+  <ArtworkLocation
+    hotelLocation="SEA: Main Lobby, Four Seasons Resort Lāna'i"
+    gpsCoordinates=`20°44'30.0"N 156°53'47.6"W`
+    terrain="Hulopo'e Bay"
+    description=`
+      Mayo's painting Outrigger is in the main lobby of the Four Seasons Resort Lāna'i at Manele Bay.
+    `
+    callToAction={{
+      target: '_blank',
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/mQiSTdfoMQMCzB7v5',
+    }}
+  />
+</Layout>
