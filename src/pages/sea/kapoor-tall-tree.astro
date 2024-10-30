@@ -4,7 +4,6 @@ import ArtworkImage from '~/components/widgets/ArtworkImage.astro';
 import ArtworkDetails from '~/components/widgets/ArtworkDetails.astro';
 import ArtistBio from '~/components/widgets/ArtistBio.astro';
 import ArtworkLocation from '~/components/widgets/ArtworkLocation.astro';
-import { URS_FISCHER } from '~/data/artistBios';
 import ScrollToTop from '~/components/widgets/ScrollToTop.astro';
 
 const metadata = {
@@ -44,10 +43,13 @@ const metadata = {
     }}
   />
   <ArtistBio
-    artist={URS_FISCHER.artist}
-    lifespan={URS_FISCHER.lifespan}
-    nationality={URS_FISCHER.nationality}
-    description={URS_FISCHER.description}
+    artist="Anish Kapoor"
+    lifespan="1954 - Present"
+    nationality="British-Indian"
+    description=`
+      Anish Kapoor is a British-Indian artist known for his large-scale sculptures and installations. 
+      He is best known for his use of reflective surfaces and his exploration of the relationship between the human body and space.
+    `
   />
   <ArtworkLocation
     hotelLocation="SEA: Lanai Ocean Ampitheater, Hulopoe Bay"
