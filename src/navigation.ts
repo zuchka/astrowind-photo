@@ -46,19 +46,24 @@ export const footerData = {
       ],
     },
     {
-      title: 'Sensei & The Four Seasons',
+      title: 'Sensei Lāna\'i',
       links: [
-        { text: 'About Koēle', href: 'https://www.fourseasons.com/sensei/' },
-        { text: 'Contact Koēle', href: 'https://www.fourseasons.com/sensei/contact-us/' },
-        { text: 'About Manele', href: 'https://www.fourseasons.com/lanai//' },
-        { text: 'Contact Manele', href: 'https://www.fourseasons.com/lanai/contact-us/' },
+        { text: 'About', href: 'https://www.fourseasons.com/sensei/' },
+        { text: 'Contact', href: 'https://www.fourseasons.com/sensei/contact-us/' },
+      ],
+    },
+    {
+      title: 'Four Seasons Lāna\'i',
+      links: [
+        { text: 'About', href: 'https://www.fourseasons.com/lanai//' },
+        { text: 'Contact', href: 'https://www.fourseasons.com/lanai/contact-us/' },
       ],
     },
   ],
-  secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
+  // secondaryLinks: [
+  //   { text: 'Terms', href: getPermalink('/terms') },
+  //   { text: 'Privacy Policy', href: getPermalink('/privacy') },
+  // ],
   socialLinks: [],
   footNote: ``,
 };

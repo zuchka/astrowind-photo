@@ -50,7 +50,7 @@ export const JAUME_PLENSA = {
       media such as water, light and sound as a reflection of
       energy and human connection.
     `,
-  copyright: '© Jaume Plensa. Courtesy of the artist and Cambridge Art Gallery',
+  copyright: '© Jaume Plensa',
 };
 
 export const URS_FISCHER = {
